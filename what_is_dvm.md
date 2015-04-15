@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Why DVM
 
 DVM combines the best from both worlds: ***Virtualization*** and ***Docker***.
@@ -37,6 +36,3 @@ You can find the more detailed comparision between DVM and other solutions in th
 
 - Container-centric OS (CoreOS, RancherOS, etc)
 -
-=======
-# What is DVM
->>>>>>> 26433cb1893c6bfee96baadd76bb9424da308497

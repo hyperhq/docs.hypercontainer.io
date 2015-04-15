@@ -1,5 +1,4 @@
 # How it works
-<<<<<<< HEAD
 
 On a physical Linux box:
 
@@ -29,5 +28,3 @@ DVM is comprised of several components:
 
 ![](https://trello-attachments.s3.amazonaws.com/552cbb0e30cc49001aaa25fc/872x464/7f1c42bbd4d73b17b7fb3670ef4994bb/upload_2015-04-14_at_3.00.26_pm.png)
 
-=======
->>>>>>> 26433cb1893c6bfee96baadd76bb9424da308497

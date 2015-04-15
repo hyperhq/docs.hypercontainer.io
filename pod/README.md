@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # What is Pod
 
 Pods is the first-class unit for app deployment and execution in DVM.
@@ -22,6 +21,3 @@ The context of the pod can be defined as the conjunction of:
 - **Filesystem**: processes within the pod cannot see each other's root filesystem
 - **Volume**: processes within a pod have access to all volumes attached with the instance
 - **Device**:
-=======
-# Pod
->>>>>>> 26433cb1893c6bfee96baadd76bb9424da308497
