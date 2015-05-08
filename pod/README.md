@@ -1,6 +1,6 @@
 # What is Pod
 
-Pods is the first-class unit for app deployment and execution in DVM.
+Pods is the first-class unit for app deployment and execution in Hyper.
 
 According to [Google Kuberenetes](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md):
 
@@ -10,7 +10,7 @@ According to [Google Kuberenetes](https://github.com/GoogleCloudPlatform/kuberne
 
 The key idea behind **Pod** is that in a microservie architecture usually involves some "helper" programs, such like log, monitoring, cron, etc. These helper programs are built to work co-operatively with the app. Therefore, instead of running in multiple isolated containers, these processes should share the same environment, although they are packaged in different images.
 
-In terms of DVM, a pod consists of a colocated group of Docker images, deployed as an atomic unit and loaded into the same DVM instance.
+In terms of Hyper, a pod consists of a colocated group of Docker images, deployed as an atomic unit and loaded into the same Hyper instance.
 
 The context of the pod can be defined as the conjunction of:
 

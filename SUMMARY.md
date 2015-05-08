@@ -1,13 +1,13 @@
 # Summary
 
-* [About DVM](README.md)
-   * [Why DVM](what_is_dvm.md)
+* [About Hyper](README.md)
+   * [Why Hyper](why_hyper.md)
    * [How it works](how_it_works.md)
    * [Performance](performance)
 * [Get Started](get_started/README.md)
    * [Install](get_started/install.md)
-   * [Launch DVM instance](get_started/launch_dvm_instance.md)
-* [DVM Instance](instance/README.md)
+   * [Launch Hyper instance](get_started/launch_instance.md)
+* [Instance](instance/README.md)
    * [Ephemeral & Persistent](instance/ephemeral_&_persistent.md)
    * [CPU](instance/cpu)
    * [Mem](instance/mem)

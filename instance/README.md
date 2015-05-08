@@ -1,2 +1,2 @@
-# DVM Instance
+# Hyper Instance
 
