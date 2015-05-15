@@ -1,30 +1,29 @@
 # How it works
 
-On a physical Linux box:
+Hyper has four components:
 
-	[root@gnep ~:]# yum install hyper
-	[root@gnep ~:]# docker pull nginx:latest
-	[root@gnep ~:]# hyper run nginx:latest
+  - CLI: ***hyper***
+  - Daemon: ***hyperd*** (with REST APIs)
+  - Guest Kernel: ***hyperkernel***
+  - Guest Init Service: ***hyperstart***
 
-Instead of using LXC, Hyper boots the image with a new VM instance:
+On a physical Linux host:
 
-	[root@gnep ~:]# docker ps
-	[root@gnep ~:]#
-	[root@gnep ~:]# virsh list
-	xxxxxx
+        [root@user ~:]# docker pull nginx:latest
+        [root@user ~:]# hyper run nginx:latest
 
-## Internal
+Upon the ***RUN*** command, Hyper launches a new VM instance, instead of containers, and mount the specified image onto the instance:
 
-Hyper is comprised of several components:
+        [root@user ~:]# docker ps
+        [root@user ~:]#
+        [root@user ~:]# hyper list
+        ......
+        Done
 
-- On the (physical) host:
-  - Hyper Daemon
-  - Hyper CLI
-  - (*) REST APIs
+Internal to the VM, a minimalist Linux kernel, called ***HyperKernel***, is booted. HyperKernel is built with a tiny Init service, called ***HyperStart***, which create a ***Pod***, setup *Mount* namespace, and launch apps from the loaded images.
 
-- In the VM instance:
-  - HyperKernel - a minimalist kernel built for Hyper
-  - Hyper Init - a tiny init service
+![](https://trello-attachments.s3.amazonaws.com/554c998a4c9dacc5c143ec99/1083x635/08dfe9e383fb0b566986fc76e3a2c8c1/hyper_2.png)
 
-![](https://trello-attachments.s3.amazonaws.com/552cbb0e30cc49001aaa25fc/872x464/7f1c42bbd4d73b17b7fb3670ef4994bb/upload_2015-04-14_at_3.00.26_pm.png)
+
+
 

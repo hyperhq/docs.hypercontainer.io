@@ -1,38 +1,53 @@
-# Why Hyper
 
-Hyper combines the best from both worlds: ***Virtualization*** and ***Docker***.
+# _The Best from Both Worlds: VM and Container_
 
+-----------
 
-## Security
+## Performance
 
-Virtualization offers an excellent security. The attack surface for a VM instance is quite small, as it lacks the variety of functions (and, therefore, the potential flaws to be exploited) provided by standard operating systems.
+When VMs take tens of seconds to boot, Hyper is able to launch instances in ***sub-second***. Also, Hyper requires the ***minimal resource footprint***: ~12MB mem, which means higher density: run hundreds of Hyper instances on a server, where a dozens of VMs would overload.
 
-More important, Hyper is immune from the isolation problem in container.
+## Secure
+
+Hyper is immune from the "*shared kernel*" problem in container, because virtualization offers an excellent ***Hardware-enforced Isolation***. The attack surface for a VM instance is quite small, as it lacks the variety of functions (and, therefore, the potential flaws to be exploited) provided by standard operating systems.
+
+## Portable
+
+Hyper is ***hypervisor agnostic***. [The current implementation](http://gnep.gitbooks.io/hyper/content/release_notes/index.html) supports KVM and Xen, with more in the roadmap. Combined with [the portability of App Container Image](https://github.com/appc), Hyper allows you to build, ship, run app anywhere, without worrying the infrastructure technology stack.
 
 ## Immutable
 
-Hyper eliminates the need for guest OS. There are no moving parts inside of a Hyper instance to be configured or managed, only the kernel and the loaded Docker images.
+Hyper eliminates the need of Guest OS. There is no moving parts inside of a Hyper instance to be configured or managed. ***The entire stack is Immutable***.
 
-Therefore the entire stack is immutable.
+## BYOK - bring your own kernel
 
-## Compatibility
+In a multi-tenant environment, the platform must allow developers to pick different kernel and modules. This is an easy job in Hyper, but very hard to do in containers, due to the fact of ”sharing the host kernel".
 
-Since each VM instance runs its own kernel, tenants have the choice to pick their favorite kernel version and modules, based on the application requirements.
+## Production Ready
 
-## Mature
+Virtualization is mature. Features like LiveMigration, SDN, SDS have been battle-tested for years. With Hyper, you can just ***Plug & Play***. No need to wait another two years for the container-version SDN.
 
-Compared with container, virtualization is production-ready. Features like LiveMigration, SDN, SDS are battle-tested for years. Hyper lets you enjoy all these features without any integration work.
+## Better ROI
 
-## Seamless Migration
+Virtualization is widely implemented among enterprises. Instead of rebuilding everything with containers, Hyper provides a ***Seamless Migration*** path to your existing virtual infrastructure.
 
-Virtualization are widespread among enterprises. Many of them have a virtualized infrastructure running. Instead of having to rebuild everything with container, Hyper provides a seamless migration path to adopt Docker.
+-------
 
-## Hypervisor Agnostic
+# Summary
+The following table gives a more detailed comparision between Docker, (traditional) VM and Hyper:
 
-Hyper is designed to be independent from the underlying virtualization technology. [The current implementation](----TODO----) supports KVM and Xen, with more virtualization technologies in the roadmap.
+| -  | Docker | VM | Hyper |
+|---|---|---|---|
+| Isolation | Weak, shared kernel | Strong, HW-enforced  | Strong, HW-enforced  |
+| Portable  | Yes | No, hypervisor dependent | Yes, hypervisor agnostic and portable image |
+| Boot  | Fast, sub-second  | Slow, tens of seconds  | Fast, sub-second  |
+| Performance  | Great | OK| Good, minimal resource footprint and overhead |
+| Immutable | Yes  | No, configuration management required | Yes, guest os is gone  |
+| Image Size| Small, MBs  | Big, GBs  | Small, MBs  |
+| Backward Compatibility | No, brand new world | Great, everything still works  | Good, still a "Machine", much less changes  |
+| Maturity   | No  | Yes, production ready, SDN, SDS, LiveMigration, etc.  | Yes, just plug-&-play |
+| ROI| Low, rebuild everything with container  | N/A | High, seamless integration with your virtual infrastructure  |
 
 
-You can find the more detailed comparision between Hyper and other solutions in the follow articles:
 
-- Container-centric OS (CoreOS, RancherOS, etc)
 -

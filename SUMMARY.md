@@ -1,9 +1,9 @@
 # Summary
 
 * [About Hyper](README.md)
-   * [Why Hyper](why_hyper.md)
    * [How it works](how_it_works.md)
-   * [Performance](performance)
+   * [Why Hyper](why_hyper.md)
+   * [Performance](performance.md)
 * [Get Started](get_started/README.md)
    * [Install](get_started/install.md)
    * [Launch Hyper instance](get_started/launch_instance.md)
