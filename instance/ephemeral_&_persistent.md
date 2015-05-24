@@ -1,6 +1,6 @@
 # Ephemeral & Persistent
 
-Due to the sub-second boot performance, Hyper instance could be considered as ephemeral entities, though it certainly clould be also used as long-running and durable.
+Tough a HyperVM instance is considered as ephemeral entities due to its nature of sub-second boot, it certainly clould be also used as long-running and durable.
 
 - Ephemeral
 

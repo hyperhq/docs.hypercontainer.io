@@ -5,7 +5,7 @@
 
 ## Performance
 
-When VMs take tens of seconds to boot, Hyper is able to launch instances in ***sub-second***. Also, Hyper requires the ***minimal resource footprint***: ~12MB mem, which means higher density: run hundreds of Hyper instances on a server, where a dozens of VMs would overload.
+When VMs take tens of seconds to boot, Hyper is able to launch instances in ***sub-second***. Also, Hyper requires the ***slimmed resource footprint***: 28MB RAM, which means higher density: run hundreds of Hyper instances on a server, where a dozens of VMs would overload.
 
 ## Secure
 
@@ -34,9 +34,9 @@ Virtualization is widely implemented among enterprises. Instead of rebuilding ev
 -------
 
 # Summary
-The following table gives a more detailed comparision between Docker, (traditional) VM and Hyper:
+The following table gives a more detailed comparision between Container, (traditional) VM and Hyper:
 
-| -  | Docker | VM | Hyper |
+| -  | Container| VM | Hyper |
 |---|---|---|---|
 | Isolation | Weak, shared kernel | Strong, HW-enforced  | Strong, HW-enforced  |
 | Portable  | Yes | No, hypervisor dependent | Yes, hypervisor agnostic and portable image |

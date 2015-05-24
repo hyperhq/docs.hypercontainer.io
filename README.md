@@ -1,12 +1,12 @@
 # About Hyper
 
-Hyper is a hypervisor-based AppContainer solution. It allows you to **run any AppContainer images (Docker, rkt) on any hypervisor (KVM, Xen, etc.)**.
+Hyper is a **Hypervisor-agnostic Docker Runtime** that allows you to run Docker images on any hypervisor (KVM, Xen, etc.).
 
 Technically speaking,
 
-    Hyper = Hypervisor + AppContainer Image
+    Hyper = Hypervisor + Kernel + Docker Image
 
-By containing applications within separate VM instances and kernel spaces, Hyper is able to offer an excellent hardware-enforced isolation, which is much needed by public cloud.
+By containing applications within separate VM instances and kernel spaces, Hyper is able to offer an excellent **Hardware-enforced Isolation**, which is much needed in multi-tenant environments.
 
 Hyper also promises **Immutable Infrastructure** by eliminating the middle layer of Guest OS, along with the hassle to configure and manage them.
 
@@ -14,13 +14,10 @@ Hyper also promises **Immutable Infrastructure** by eliminating the middle layer
 
 Performance-wise, **Hyper is super light**:
 
-- **Sub-second Boot**: 0.5 second to launch a HyperVM instance
-- **Minimal Overhead**: 1-2% CPU overhead
-- **Higher Density**: minimal Mem requirement is ~12MB for Hyper (512MB on AWS EC2)
+- **Sub-second Boot**: milliseconds to launch a HyperVM instance
+- **Slimmed Footprint**: ~28 MB RAM (512MB on AWS EC2)
 
 With Hyper, the future of Container-as-a-Service  is just around the corner.
 
 ![](https://trello-attachments.s3.amazonaws.com/552ba9ad83b51945d06ef23b/940x238/9e7346bfd21bc756361c70d8397e76f2/upload_2015-04-13_at_7.58.15_pm.png)
-
-
 
