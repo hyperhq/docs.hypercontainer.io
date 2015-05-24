@@ -4,22 +4,21 @@ Usage:
 
     hyper [OPTIONS] COMMAND [ARGS...]
 
-
 Command:
 
-    attach      Attach to tty of a specified namespace in a pod
-    create      Create a pod, without running it (stopped after created)
-    exec        Run a command in one namespace in a pod, and attach to its STDIO
-    pod         Launch a new pod with a new VM instance
-    pull        Pull an image or repository from a Docker registry server
-    run         Launch an image with a new VM instance
-    stop        Stop a running VM instance
-    replace     Stop a pod in a running VM instance, and replace it with a new pod
-    info        Display system-wide information
-    list        List all pods, VM instances or namespaces
+    run         create a pod, and launch a new VM to run the pod
+    start       launch a 'created' pod in a VM
+    stop        stop a running pod and its VM
+    exec        run a command in a container of a running pod
+    create      create a pod, but without running it
+    replace     replace the pod in a running VM with a new one
+    kill        terminate a VM instance
+    rm          destory a pod
+    attach      attach to the tty of a specified container in a pod
+    pull        pull an image from a Docker registry server
+    info        display system-wide information
+    list        list all VMs, pods or containers
 
 Help Options:
 
-    -h, --help  Show this help message
-
-
+    -h, --help  show this help message

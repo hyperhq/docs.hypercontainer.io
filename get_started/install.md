@@ -1,9 +1,15 @@
 # Install
 
-## RHEL, CentOS
+To set Hyper up, simply
 
-## AWS EC2
+    sudo curl https://install.hyper.sh | sh
 
-## Ubuntu
+Please note that [the current version](../release_notes/latest.md) supports the following Linux distro:
 
-## Debian
+- Ubuntu
+- CentOS
+- Fedora
+- Debian
+- Redhat Enterprise Linux
+- SuSE
+

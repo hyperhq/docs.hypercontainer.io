@@ -1,14 +1,5 @@
 
-## States
-
-### VM
-
-VM is a running VM process, a Pod could run on top of a vm, and stop on it, and VM does not has persistent status, will be reclaim after shutdown.
-
-A running VM has 2 state:
-
-- **Associated** with a Pod, or
-- **Idle**
+# The Life of Pod
 
 ### Pod
 
@@ -20,7 +11,7 @@ A pod has the following states
 
 - **None**: No ID, No storage, Noting at all
 - **Created**: Prepared, but not run
-  - Container storage allocated, but 
+  - Container storage allocated, but
     - for dm, only stay in thin pool, do not make device in `/dev`
     - for aufs, dir created and file putted, do not mount aufs in anywhere
   - Volume only allocated, like container
@@ -50,7 +41,7 @@ Common procedures could change VM or Pod status, or just change one of them.
   - stop a running pod on a , (create and )start another pod on the VM
   - create and start is the default behavior, not create if a existing pod id provided
 - **attach** attach to tty of a specified container in a pod
-- **exec** 
+- **exec**
   - run a command in a container in a pod, and attach current terminal to the stdio of oommand
   - do not attach if detached flag (`-d`) provided
 
@@ -62,7 +53,7 @@ Common procedures could change VM or Pod status, or just change one of them.
 
 ### Short cut
 
-- **run**, run a container on a VM and 
+- **run**, run a container on a VM and
 
 ### Bridge to docker
 
