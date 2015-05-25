@@ -7,18 +7,18 @@ The configuration file of Hyper is located under `/etc/hyper.conf`. The file is 
 	Host   = tcp://localhost:1246
     Bios   = /var/lib/hyper/bios.bin
     Cbfs   = /var/lib/hyper/cbfs.rom
-    Kernel = /usr/lib64/hyper/kernerl-4.0.1
-    Initrd = /usr/lib64/hyper/initrd.img
+    Kernel = /var/lib/hyper/kernerl-4.0.1
+    Initrd = /var/lib/hyper/initrd.img
     Bridge = hyper0
 	BridgeIP = 192.168.123.1/24
 
 #### Parameters
 
-- `Host`: the IP:Port
-- `Bios`: the BIOS binary file
-- `Cbfs`: the CBFS ROM file
-- `Kernel`: path of the HyperKernel, by default `/usr/lib64/hyper/kernel-4.0.1`
-- `Initrd`: path of the initrd file, by default `/usr/lib64/hyper/initrd.img`
+- `Host`: bind hyperd's socket to the IP and Port, by default hyperd listens on `unix:///var/run/hyper.sock`
+- `Bios`: the BIOS binary file path, by default `/var/lib/hyper/bios.bin`
+- `Cbfs`: the CBFS ROM file path, by default `/var/lib/hyper/cbfs.rom`
+- `Kernel`: the path of the HyperKernel, by default `/var/lib/hyper/kernel-4.0.1`
+- `Initrd`: the path of the initrd file, by default `/var/lib/hyper/initrd.img`
 - `Bridge`: bridge name, default `hyper0`
 - `BridgeIP`:  IP range of the bridge, default `192.168.123.0/24`
 
