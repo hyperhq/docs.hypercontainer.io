@@ -1,12 +1,9 @@
 # stop
 
-Stop a Pod; let a Pod be created
+Stop a `Running` pod, which will return to `Pending`
 
 	Usage:
-	  hyper stop [--onlypod] POD_ID
-
-	Application Options:
-	      --onlypod          Stop a Pod, but leave the VM running (default: false)
+	  hyper stop POD_ID
 
 	Help Options:
 	  -h, --help             Show this help message

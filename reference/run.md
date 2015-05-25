@@ -1,8 +1,6 @@
 # run
 
-You can run only `hyper run -p POD_FILE` or `hyper run ubuntu bash` to start a Pod and VM.
-
-If needed, you can add the following options:
+Launch one or multiple Docker images as a pod, with a new VM instance
 
 	Usage:
 	  hyper run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -13,7 +11,7 @@ If needed, you can add the following options:
 	  -a, --attach           Attach stdin, stdout and stderr to the container
 	  -w, --workdir=""       Working directory inside the container
 	  -t, --tty              Allocate a pseudo-TTY
-	  -c, --cpu=1            CPU shares (relative weight)
+	  -c, --cpu=1            Number of CPU cores
 	  -m, --memory=128       Memory limit (format: <number><optional unit>; where unit = b, k, m or g)
 	  -e, --env=[]           Set environment variables
 	      --entrypoint=""    Overwrite the default ENTRYPOINT of the image
@@ -21,3 +19,11 @@ If needed, you can add the following options:
 
 	Help Options:
 	  -h, --help             Show this help message
+
+	Example:
+	  hyper run ubuntu
+	  hyper run ubuntu:latest
+	  hyper run ubuntu /bin/sh
+	  hyper run -p mypod.json
+
+
