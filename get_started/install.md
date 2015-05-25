@@ -1,5 +1,12 @@
 # Install
 
+### Requirements
+
+- QEMU 2.0 or higher
+- Docker 1.5 or higher
+
+### Setup
+
 To set Hyper up, simply
 
     sudo curl https://install.hyper.sh | sh
@@ -15,4 +22,6 @@ Please note that [the current version](../release_notes/latest.md) supports the 
 	- 6.x (upgrade to QEMU 2.0)
 - Fedora 20-22 64bit
 - Debian 7.4 wheezy 64bit (upgrade to QEMU 2.0)
+
+### Build from source
 
