@@ -1,6 +1,6 @@
 # replace
 
-Replace a Pod; let a Pod be created and run it
+Deallocate the VM instance from a `Running` pod A and re-assign to a `Pending` pod B. Pod A will return to `Pending`
 
 	Usage:
 	  hyper replace --oldpod POD_ID --newpod POD_ID [--file POD_FILE]

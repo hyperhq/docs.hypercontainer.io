@@ -1,6 +1,6 @@
 # create
 
-Create a Pod; let a Pod be created, but do not run it
+Define a pod and allocate storage, but without starting it. The pod will stay at `Pending`.
 
 	Usage:
 	  hyper create POD_FILE
