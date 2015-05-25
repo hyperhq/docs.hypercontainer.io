@@ -5,10 +5,10 @@ This is the API reference of `hyperd` based on [The latest release](../release_n
 
 ### 1. Introduction
 * By default `hyperd` listens on unix:///var/run/hyper.sock and the client must have root access to interact with the daemon.
-* [The current release](../release_notes/latest.md) does not support an encrypted connection.
-* The Remote API uses an open schema model. In this model, unknown properties in incoming messages will be ignored. Client applications need to take this into account to ensure they will not break when talking to newer hyperd daemons.
+* [The current release](../release_notes/latest.md) does not support encrypted connections.
+* The Remote API uses an open schema model. In this model, unknown properties in incoming messages will be ignored. Client applications need to take this in consideration to ensure they will not break when talking to newer hyperd daemons.
 * Calling `/info` is the same as calling `/${latest}/info`
-* The API tends to be REST, but for some complex commands, like attach or pull, the HTTP connection is hijacked to transport stdout stdin and stderr
+* The API tends to be RESTfull, but for some complex commands, like attach or pull, the HTTP connection is hijacked to transport stdout, stdin and stderr
 
 ### 2. Endpoints
 #### 2.1 Pod
@@ -21,7 +21,7 @@ Create a pod
 
 `POST /pod/create?podArgs=****`
 
-The argument is a string which convert the user pod's json to string.
+The argument is a string, which converts the pod's json to a string.
 ##### Start pod
 `POST /pod/start`
 
@@ -33,7 +33,7 @@ Start a pod
 
 The VM id can be "", and then it will create a new VM.
 ##### Stop pod
-`POST /pod/start`
+`POST /pod/stop`
 
 Stop a pod
 
@@ -41,7 +41,7 @@ Stop a pod
 
 `POST /pod/stop?podId=pod-xxxxxxxxxx&stopVM=yes`
 
-The `stopVM` property can be `yes` or `no`, it will desctroy the VM associated with the pod if its value is `yes`
+The `stopVM` property can be `yes` or `no`; it will destroy the VM associated with the pod if its value is `yes`
 
 ##### Destroy pod
 `POST /pod/remove`

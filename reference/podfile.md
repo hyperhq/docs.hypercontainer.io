@@ -1,6 +1,6 @@
 # Podfile
 
-Podfile is in JSON format. A basic sample looks like:
+Podfile is in JSON format. A basic sample looks like the following:
 
     {
         "name": "myweb",
@@ -28,48 +28,39 @@ Podfile is in JSON format. A basic sample looks like:
 
 ## Sections
 
-- `name`: the identifier (and the internal hostname) of the pod
+- `name`: the identifier (and internal hostname) of the pod
 - `containers`: a group of containers to run in the pod
-- `files`: setup the files to be present in the containers
-- `volumes`: mount the volumes from the host to the containers
-- `tty`: turn on/off the tty connection to the pod, default: `true`
+- `files`: files to be present in the containers
+- `volumes`: volumes to mount from the host to the containers
+- `tty`: turn on/off (`true`/`false`) the tty connection to the pod, default: `true`
 
 > ### Containers
 
-- `name`: the identifier of a container, a random id will be given if absent
+- `name`: the identifier of a container; a random id will be given if absent
 
-
-- `image`: in the form of `[registry]/image[:tag]`, hyper will automatically pull the image if missing
-
+- `image`: in the form `[registry]/image[:tag]`; hyper will automatically pull the image if missing
 
 - `command`: the shell command to run when the container starts
 
-
 - `entryPoint`: the executable to run when the container starts (override `command`)
 
-
 - `ports`: the exposed ports of the container **(RESERVED)**
-
 
 - `envs`: set a list of environment variables in the container
     - (*Predefined*) `HYPER_POD_IP`: IP Address of the POD
 
-
 - `volumes`: volumes to be mounted in the container.
     -  `path`: the mount point
-    -  `volume`: the name of the volume to be mounted, defined in **Section Volumes**
+    -  `volume`: the name of the volume to be mounted, defined in **Section 'Volumes'**
     -  `readOnly`: if `true`, the mount point will be read only, default `false`
-
 
 - `files`: files to be present in the container
     -  `path`: the file path in the container
-    -  `filename`: the filename defined in the **Section Files**
+    -  `filename`: the filename defined in the **Section 'Files'**
 
-
-- `restartPolicy`: restart the container if exit, `never`, `onFailure`, or `always`
+- `restartPolicy`: restart the container if exit: `never`, `onFailure`, or `always`
 
 example:
-
 
     "containers" : [{
         "name":  "app",
@@ -98,16 +89,13 @@ example:
 
 > ### Files
 
-- `name`: the file name, used in **Section Containers**
+- `name`: the file name; used in **Section 'Containers'**
 
+- `encoding`: the file encoding; `raw` or `base64`. the content will be decoded when `base64` is specified
 
-- `encoding`: file encoding, `raw` or `base64`. the content will be decoded when `base64` is specified
+- `uri`: fetch the file from this address
 
-
-- `uri`: fetch the file from the address
-
-
-- `content`: specify the file content
+- `content`: specify the content of the file
 
 example:
 
@@ -122,9 +110,7 @@ example:
 
 - `name`: identifier of the volume
 
-
-- `source`: the volume path on the host, either dir or file. If absent, a new volume will be created
-
+- `source`: the volume path on the host, either directory or file. If absent, a new volume will be created
 
 - `driver`: the volume format
   - block-device-image file: `raw`, `qcow2`, the image file must contain `EXT4` fs
