@@ -1,6 +1,6 @@
 # stop
 
-Stop a `Running` pod, which will return to `Pending`
+Stop a `Running` pod, which will return to `Pending` state
 
 	Usage:
 	  hyper stop POD_ID

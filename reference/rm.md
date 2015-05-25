@@ -1,6 +1,6 @@
 # rm
 
-Remove a pod permantly, cleanup its disk storage.
+Remove a Pod permantly, cleanup its disk storage.
 
 	Usage:
 	  hyper rm POD_ID

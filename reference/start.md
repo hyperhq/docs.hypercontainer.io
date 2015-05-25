@@ -1,6 +1,6 @@
 # start
 
-Launch a `Pending` pod, with a new VM instance
+Launch a `Pending` Pod, with a new VM instance
 
 	Usage:
 	  hyper start POD_ID
