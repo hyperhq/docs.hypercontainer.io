@@ -6,18 +6,18 @@ Usage:
 
 Command:
 
-    run         create a pod, and launch a new VM to run the pod
-    start       launch a 'created' pod in a VM
-    stop        stop a running pod and its VM
-    exec        run a command in a container of a running pod
-    create      create a pod, but without running it
-    replace     replace the pod in a running VM with a new one
+    run         create a Pod, and launch a new VM to run the Pod
+    start       launch a 'created' Pod in a VM
+    stop        stop a running Pod and its VM
+    exec        run a command in a container of a running Pod
+    create      create a Pod, but without running it
+    replace     replace the Pod in a running VM with a new one
     kill        terminate a VM instance
-    rm          destory a pod
-    attach      attach to the tty of a specified container in a pod
+    rm          destory a Pod
+    attach      attach to the tty of a specified container in a Pod
     pull        pull an image from a Docker registry server
     info        display system-wide information
-    list        list all VMs, pods or containers
+    list        list all VMs, Pods or containers
 
 Help Options:
 
