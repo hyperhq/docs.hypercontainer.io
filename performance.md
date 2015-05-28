@@ -1,14 +1,11 @@
 # Performance
 
-
-
 ## 1. Time
 
 
 ### 1.1 Pod startup time
 
-Run a new pod only 
-takes `336` millisecond(ms).
+Run a new Pod only takes `336` millisecond(ms).
 
 | - | min(ms) | max(ms) | avg(ms) |
 | --- | --- | --- | --- |
@@ -18,7 +15,7 @@ takes `336` millisecond(ms).
 
 ### 1.2 Pod replace time
 
-Replace a running pod with a new one, only takes `95` ms.
+Replace a running Pod with a new one, only takes `95` ms.
 
 | -   | min(ms) | max(ms) | avg |
 | --- | --- | --- | --- |
@@ -35,7 +32,7 @@ The minimum startup memory is `28`(MB)
 
 ### 2.2 QEMU process memory usage
 
-When start a pod with minimum startup memory, QEMU process use `49`MB physical memory in Host OS.
+When starting a Pod with minimum startup memory, QEMU process uses `49`MB physical memory in Host OS.
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
@@ -43,9 +40,9 @@ When start a pod with minimum startup memory, QEMU process use `49`MB physical m
 |VSZ(VmSize)|   437 |   438 |   438 |
 
 
-### 2.3 Memory usage in pod (MB)
+### 2.3 Memory usage in Pod (MB)
 
- When start a pod with minimum startup memory, there will be `9`MB free memory in a running Pod. Hyper Kernel takes only `11`MB memory.
+When start a Pod with minimum startup memory, there will be `9`MB free memory in a running Pod. Hyper Kernel only takes `11`MB memory.
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
@@ -59,7 +56,7 @@ When start a pod with minimum startup memory, QEMU process use `49`MB physical m
 
 Allocation of resources: 2 CPU, 2048GB Memory
 
-The following table is the result of sysbench CPU performance test. CPU performance in hyper is pretty close to Host OS.
+The following table is the result of sysbench CPU performance test. CPU performances in hyper are pretty close to Host OS.
 
 | target| num-threads| cpu-max-prime| total time(sec)| resp min(ms)| resp avg(ms)| resp max(ms)|
 | --- | --- |--- |--- |--- |--- |--- |
@@ -74,7 +71,7 @@ The following table is the result of sysbench CPU performance test. CPU performa
 
 ## 4. Memory Performance
 
-Allocation of resources: 2 CPU, 2048GB Memory  
+Allocation of resources: 2 CPU, 2048GB Memory
 Test parameter: 1MB block size, transfer datasize is 100GB.
 
 The following table is the result of sysbench memory performance test.
