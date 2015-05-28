@@ -2,8 +2,8 @@
 
 ### Requirements
 
-- QEMU 2.0 or higher
-- Docker 1.5 or higher
+- QEMU 2.0 or later
+- Docker 1.5 or later
 
 ### Setup
 
