@@ -31,7 +31,7 @@ Start a pod
 
 `POST /pod/start?podId=pod-xxxxxxxxxx&vmId=vm-xxxxxxxxxx`
 
-The VM id can be "", and then it will create a new VM.
+If the VM id is empty (""), then it will create a new VM.
 ##### Stop pod
 `POST /pod/stop`
 

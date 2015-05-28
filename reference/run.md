@@ -1,6 +1,10 @@
 # run
 
+<<<<<<< HEAD
 Launch one or multiple Docker images as a pod, with a new VM instance
+=======
+Launch one or multiple Docker images as a Pod, with a new VM instance
+>>>>>>> f70b1f92db92d3a5d9b40f3ccdf29a685e42f4a2
 
 	Usage:
 	  hyper run [OPTIONS] IMAGE [COMMAND] [ARG...]

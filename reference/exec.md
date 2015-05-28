@@ -1,6 +1,6 @@
 # exec
 
-Run a command in a container or a Pod, and attach the current terminal to the stdio of this command
+Run a command in a container or a Pod, and attach the current terminal to the command stdio.
 
 	Usage:
 	  hyper exec POD_ID:CONTAINER_NAME COMMAND [ARGS...]

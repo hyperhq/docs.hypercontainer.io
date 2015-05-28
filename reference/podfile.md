@@ -28,11 +28,11 @@ Podfile is in JSON format. A basic sample looks like the following:
 
 ## Sections
 
-- `name`: the identifier (and internal hostname) of the pod
-- `containers`: a group of containers to run in the pod
+- `name`: the identifier (and internal hostname) of the Pod
+- `containers`: a group of containers to run in the Pod
 - `files`: files to be present in the containers
 - `volumes`: volumes to mount from the host to the containers
-- `tty`: turn on/off (`true`/`false`) the tty connection to the pod, default: `true`
+- `tty`: turn on/off (`true`/`false`) the tty connection to the Pod, default: `true`
 
 > ### Containers
 
@@ -47,7 +47,7 @@ Podfile is in JSON format. A basic sample looks like the following:
 - `ports`: the exposed ports of the container **(RESERVED)**
 
 - `envs`: set a list of environment variables in the container
-    - (*Predefined*) `HYPER_POD_IP`: IP Address of the POD
+    - (*Predefined*) `HYPER_POD_IP`: IP Address of the Pod
 
 - `volumes`: volumes to be mounted in the container.
     -  `path`: the mount point
@@ -113,7 +113,7 @@ example:
 - `source`: the volume path on the host, either directory or file. If absent, a new volume will be created
 
 - `driver`: the volume format
-  - block-device-image file: `raw`, `qcow2`, the image file must contain `EXT4` fs
+  - block-device-image file: `raw`, `qcow2`; the image file must contain `EXT4` fs
   - plain file or dir: `vfs`
   - empty: leave empty
 
