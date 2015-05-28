@@ -17,7 +17,7 @@ Run a new Pod only takes `336` millisecond(ms).
 
 Replace a running Pod with a new one, only takes `95` ms.
 
-| -   | min(ms) | max(ms) | avg |
+| -   | min(ms) | max(ms) | avg(ms) |
 | --- | --- | --- | --- |
 | replace time | 80 | 107 | 95 |
 
@@ -34,17 +34,17 @@ The minimum startup memory is `28`(MB)
 
 When starting a Pod with minimum startup memory, QEMU process uses `49`MB physical memory in Host OS.
 
-|  -  | min | max | avg |
+|  -  | min(MB) | max(MB) | avg(MB) |
 | --- | --- | --- | --- |
 |RSS(VmRSS) |    48 |    50 |    49 |
 |VSZ(VmSize)|   437 |   438 |   438 |
 
 
-### 2.3 Memory usage in Pod (MB)
+### 2.3 Memory usage in Pod
 
 When start a Pod with minimum startup memory, there will be `9`MB free memory in a running Pod. Hyper Kernel only takes `11`MB memory.
 
-|  -  | min | max | avg |
+|  -  | min(MB) | max(MB) | avg(MB) |
 | --- | --- | --- | --- |
 |Total|    21 |    21 |    21 |
 |Used |    11 |    11 |    11 |
