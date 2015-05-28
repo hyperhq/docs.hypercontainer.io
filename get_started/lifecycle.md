@@ -4,7 +4,7 @@
 
 In Hyper, a pod has two states:
 
-- `Pending`: a pod is defined, its storage has been allocated, and the Docker images have been downloaded
+- `Created`: a pod is defined, its storage has been allocated, and the Docker images have been downloaded
 - `Running`: a pod (with its containers) is launched in a VM instance
 
 
@@ -18,7 +18,7 @@ Or, implicitly:
 
 In both cases, pod and VM are inseverable. Hyper will automatically provision a new VM instance to host the pod, and the pod will be `Running`.
 
-However, you can also create a pod, but without an underlying VM. In such case, the pod stays in `Pending` state.
+However, you can also create a pod, but without an underlying VM. In such case, the pod stays in `Created` state.
 
     [root@user ~:]# hyper create -p podfile.json
 
@@ -38,7 +38,7 @@ When you `STOP` a pod, the underlying VM instance will be terminated:
 
     [root@user ~:]# hyper stop pod_id
 
-When stopped, the pod will return to `Pending`.
+When stopped, the pod will return to `Created`.
 
 To permantly destroy a pod, you need to `RM` it:
 

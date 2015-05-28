@@ -10,7 +10,7 @@ As consistent with the overall [API convention](api-conventions.md#typical-statu
 
 The number and meanings of `PodPhase` values are tightly guarded.  Other than what is documented here, nothing should be assumed about pods with a given `PodPhase`.
 
-* Pending: The pod has been accepted by the system, but one or more of the container images has not been created.  This includes time before being scheduled as well as time spent downloading images over the network, which could take a while.
+* Created: The pod has been accepted by the system, but one or more of the container images has not been created.  This includes time before being scheduled as well as time spent downloading images over the network, which could take a while.
 * Running: The pod has been bound to a node, and all of the containers have been created.  At least one container is still running, or is in the process of starting or restarting.
 * Succeeded: All containers in the pod have terminated in success, and will not be restarted.
 * Failed: All containers in the pod have terminated, at least one container has terminated in failure (exited with non-zero exit status or was terminated by the system).
