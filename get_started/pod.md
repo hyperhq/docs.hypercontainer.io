@@ -20,7 +20,7 @@ In Hyper, a pod consists of a colocated group of Docker images, deployed in a si
 
 The exception is ***`Mount`***. Since a Pod may have multiple app images, Hyper applies the ***`Mount`*** namespace to isolate the root filesystem from each other.
 
-Note: Hyper is immune from [Pid  1 problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/), since HyperInit launches the app processes and continues to live in the same namespace with them.
+Note: Hyper is immune from [Pid  1 problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/), since HyperStart launches the app processes and continues to live in the same namespace with them.
 
 
 

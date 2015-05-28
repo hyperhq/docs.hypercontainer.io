@@ -5,7 +5,7 @@ Hyper has four components:
   - CLI: ***hyper***
   - Daemon: ***hyperd*** (with REST APIs)
   - Guest Kernel: ***hyperkernel***
-  - Guest Init Service: ***hyperinit***
+  - Guest Init Service: ***hyperstart***
 
 On a physical Linux host:
 
@@ -20,7 +20,7 @@ Upon ***RUN***, Hyper launches the Docker images with a new VM instance, instead
         ......
         Done
 
-Internal to the HyperVM, a minimalist Linux kernel, called ***HyperKernel***, is booted. The kernel employs a tiny Init service, called ***HyperInit*** to load the Docker images from the host, setup *MNT* namespace to isolate their filesystems, and launch them.
+Internal to the HyperVM, a minimalist Linux kernel, called ***HyperKernel***, is booted. The kernel employs a tiny Init service, called ***HyperStart*** to load the Docker images from the host, setup *MNT* namespace to isolate their filesystems, and launch them.
 
 ![](https://trello-attachments.s3.amazonaws.com/554c998a4c9dacc5c143ec99/1083x635/c6cb963194f1756031c6cc359a35cec7/hyper_arch.png)
 
