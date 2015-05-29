@@ -25,3 +25,34 @@ Please note that [the current version](../release_notes/latest.md) supports the 
 
 ### Build from source
 
+#### Daemon and CLI client:
+
+Clone hyper in GoPath
+
+    > cd ${GOPATH}/src
+	> git clone https://github.com/hyperhq/hyper.git hyper
+
+Makesure some dependency go packages installed
+
+    > cd hyper
+    > ./make_deps.sh
+
+And got hyper binaries with `go build`
+
+    > go build hyperd.go
+    > go build hyper.go
+
+#### Kernel and Initrd
+
+Clone hyperstart 
+
+    > git clone https://github.com/hyperhq/hyperstart.git hyperstart
+    
+And build with autotools
+
+    > ./autogen.sh
+    > ./configure
+    > make
+
+Then you can find `hyper-initrd.img` in build directory, together with a pre-build `kernel`. You can also found the `kernel_config` in the repo.
+
