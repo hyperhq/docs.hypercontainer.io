@@ -1,1 +1,24 @@
 # Version 0.1 (2015-05-25)
+
+First public release of Hyper, shipping with the following features:
+
+## Highlight Features
+
+- Run docker image on kvm hypervisor out of box (only require Qemu 2.0 and Docker 1.5):
+
+      hyper run ubuntu
+- [Qboot](https://github.com/bonzini/qboot) support: start a complete pod in 350ms, with qemu shipped with distro.
+- Pod Support, run multiple images on one hypervisor.
+
+      hyper run -p examples/multi-container.pod
+- [Kubernetes](http://kubernetes.io/) style pod (JSON and YAML) support with 
+
+      hyper run -k k8s-pod.json
+      hyper run -y -k k8s-pod.yaml
+- Support upgrade with out interrupt apps running on VMs
+
+      kill -HUP <hyperd pid>
+      #... update hyperd
+      service hyperd start
+
+More details on the web site [(http://hyper.sh)](http://hyper.sh/).
