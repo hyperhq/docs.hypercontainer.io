@@ -1,6 +1,6 @@
 # About Hyper
 
-Hyper is a **Hypervisor-agnostic Docker Runtime** that allows you to run Docker images on any hypervisor (KVM, Xen, etc.).
+Hyper is a **Hypervisor-agnostic Docker Engine** that allows you to run Docker images on any hypervisor (KVM, Xen, etc.).
 
 Technically speaking,
 
