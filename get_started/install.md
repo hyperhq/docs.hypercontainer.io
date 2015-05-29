@@ -9,7 +9,7 @@
 
 To set Hyper up, simply
 
-    sudo curl https://install.hyper.sh | sh
+    sudo curl -sSL https://install.hyper.sh | bash
 
 Please note that [the current version](../release_notes/latest.md) supports the following Linux distro:
 
