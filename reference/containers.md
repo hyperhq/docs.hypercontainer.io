@@ -30,7 +30,7 @@ example:
     "containers" : [{
         "name":  "app",
         "image": "repo/image:tag",
-        "command": "/bin/sh",
+        "command": ["/bin/sh"],
         "entryPoint" [""],
         "envs":  [{
             "env": "JAVA_OPT",
