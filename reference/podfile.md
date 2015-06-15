@@ -8,7 +8,7 @@ Podfile is in JSON format. A basic sample looks like the following:
 
         "resource": {
             "vcpu": 1,
-            "memory": "128"
+            "memory": 128
         },
 
         "containers" : [{
