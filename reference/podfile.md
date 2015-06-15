@@ -3,7 +3,7 @@
 Podfile is in JSON format. A basic sample looks like the following:
 
     {
-        "name": "myweb",
+        "id": "myweb",
         "tty": true,
 
         "resource": {
@@ -32,7 +32,7 @@ Podfile is in JSON format. A basic sample looks like the following:
 
 ## Sections
 
-- `name`: the identifier (and internal hostname) of the Pod
+- `id`: the identifier (and internal hostname) of the Pod
 - `tty`: turn on/off (`true`/`false`) the tty connection to the Pod, default: `true`
 - `resources`: specify the number of CPU cores and RAM size allocated to the HyperVM instance
 - `containers`: a group of containers to run in the Pod
