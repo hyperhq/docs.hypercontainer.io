@@ -8,9 +8,15 @@
 
 ### Setup
 
-To set Hyper up, simply
+To set Hyper up, simply (kvm version)
 
     curl -sSL https://hyper.sh/install | bash
+
+or (xen version, include kvm support too, but has dependency of xen 4.5 library)
+
+    curl -sSL https://hyper.sh/install-xen | bash
+
+Don't like the "curl to bash" methods? Download tarball here: [kvm version](http://hyper-install.s3.amazonaws.com/hyper-latest.tgz), [xen version](http://hyper-install.s3.amazonaws.com/hyper-xen-latest.tgz).
 
 Please note that [the current version](../release_notes/latest.md) supports the following Linux distro:
 
