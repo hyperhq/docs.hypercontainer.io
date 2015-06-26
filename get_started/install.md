@@ -4,6 +4,7 @@
 
 - QEMU 2.0 or later
 - Docker 1.5 or later
+- Xen 4.5 or later (for Xen support)
 
 ### Setup
 
