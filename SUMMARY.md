@@ -29,5 +29,6 @@
    * [License](license.md)
 * [Release Notes](release_notes/README.md)
    * [latest](release_notes/latest.md)
+   * [v0.2 (2015-06-26)](release_notes/v0.2.md)
    * [v0.1 (2015-05-25)](release_notes/v0.1.md)
 
