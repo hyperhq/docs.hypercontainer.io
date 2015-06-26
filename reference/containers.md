@@ -6,12 +6,15 @@
 
 - `command`: the shell command to run when the container starts
 
-- `entryPoint`: the executable to run when the container starts (override `command`)
+- `entryPoint`: the executable to run when the container starts 
+    - The `command` will be appended to `entryPoint` as parameters if `entryPoint` is not empty.
 
-- `ports`: the exposed ports of the container **(RESERVED)**
+- `workdir`: the directory running the container command
 
-- `envs`: set a list of environment variables in the container
-    - (*Predefined*) `HYPER_POD_IP`: IP Address of the Pod
+- `ports`: the exposed ports of the container
+    - `containerPort`: the listening port inside container
+    - `hostPort`: the port exposed in host machine
+    - `protocol`: `tcp` (default) or `udp`
 
 - `volumes`: volumes to be mounted in the container.
     -  `path`: the mount point
@@ -31,7 +34,7 @@ example:
         "name":  "app",
         "image": "repo/image:tag",
         "command": ["/bin/sh"],
-        "entryPoint" [""],
+        "workdir": "/root",
         "envs":  [{
             "env": "JAVA_OPT",
             "value": "-XMx=256m"
@@ -41,10 +44,14 @@ example:
             "volume": "name",
             "readOnly": false
         }],
-        "files":  [
+        "files":  [{
             "path": "/var/lib/xxx/xxxx",
             "filename": "name",
             "perm": "0755"
-        ],
+        }],
+        "ports":[{
+            "containerPort": 80,
+            "hostPort": 8000,
+        }],
         "restartPolicy": "never"
     }]
