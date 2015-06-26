@@ -32,17 +32,23 @@ Clone hyper in GoPath
     > cd ${GOPATH}/src
 	> git clone https://github.com/hyperhq/hyper.git hyper
 
-Makesure some dependency go packages installed
+And make sure you have `go` (>= 1.4), `godep`, and `autotools`, go into the `hyper` dir
 
-    > cd hyper
-    > ./make_deps.sh
+    > ./autogen.sh
+    > ./configure
+    > make
 
-And got hyper binaries with `go build`
+(If you do not want to build with xen support, use configure option `--without-xen`.)
 
-    > go build hyperd.go
-    > go build hyper.go
+Then you can get the binaries `hyperd` daemon and `hyper` cmdline tool. 
 
-#### Kernel and Initrd
+#### Build Xen from source
+
+Download Xen 4.5.0 or later version, and configure with the following option
+
+    > ./configure --with-extra-qemuu-configure-args="--enable-virtfs"
+
+#### Guest Kernel and Initrd
 
 Clone hyperstart 
 
