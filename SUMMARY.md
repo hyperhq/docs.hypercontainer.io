@@ -27,6 +27,8 @@
    * [API](reference/api.md)
    * [Config](reference/configuration.md)
    * [License](license.md)
+* [Trouble Shooting](trouble_shooting/README.md)
+   * [Xen FAQ](trouble_shooting/xen.md)
 * [Release Notes](release_notes/README.md)
    * [latest](release_notes/latest.md)
    * [v0.2 (2015-06-26)](release_notes/v0.2.md)
