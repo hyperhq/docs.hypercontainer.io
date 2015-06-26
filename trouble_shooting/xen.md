@@ -2,6 +2,15 @@
 
 ## Xen Installation
 
+#### What are the Xen installation requirements?
+
+- Xen 4.5 or later
+- hvm support. (check it with `xl info`)
+
+#### I have xen 4.4, does it work?
+
+No. Xen 4.4 do not support hvm direct boot, we are working on other methods, but they were not included in the current release. Pull requests are always welcome.
+
 #### I have xen 4.5 installed, but can not load Xen driver in hyper.
 
 Please make sure the `xenstored` running. You could start it with 
@@ -22,6 +31,8 @@ If you found this message log:
 
 You should limit the xen dom0 memory, try this xen command line option in `grub.cfg`: `dom0_mem=1024M`
 
-#### I have xen 4.4, does it work?
+## Build from Source
 
-No. Xen 4.4 do not support hvm direct boot, we are working on other methods, but they were not included in the current release.
+#### I met many cgo errors when I build from source.
+
+Old version of go compiler has issues with the cgo code. Try update to go 1.4 or later
