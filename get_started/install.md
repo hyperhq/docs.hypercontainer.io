@@ -28,7 +28,9 @@ Please note that [the current version](../release_notes/latest.md) supports the 
 	- 7.0
 	- 6.x (upgrade to QEMU 2.0)
 - Fedora 20-22 64bit
-- Debian 7.4 wheezy 64bit (upgrade to QEMU 2.0)
+- Debian 64bit
+    - 8.0 jessie
+    - 7.x wheezy (upgrade to QEMU 2.0)
 
 ### Build from source
 
