@@ -1,3 +1,11 @@
+# Version 0.2.1 (2015-07-06)
+
+This is a mantanence update of 0.2, fix some bugs:
+
+- add validation for running a pod.
+- fix file insertion issue in aufs/overlay engine
+- hyperstart changed virtfs option, this fixes multi-line cat issue
+
 # Version 0.2 (2015-06-26)
 
 The second public release of Hyper, brings bug fixes and the following features:
