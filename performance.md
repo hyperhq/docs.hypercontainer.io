@@ -5,99 +5,165 @@
 
 ### 1.1 Pod startup time
 
-Run a new Pod only takes `336` millisecond(ms).
+Run a new Pod only takes `376` millisecond(ms).
 
-| - | min(ms) | max(ms) | avg(ms) |
-| --- | --- | --- | --- |
-| startup time  | 314 | 366 | 336 |
+| - | with-qboot | min(ms) | max(ms) | avg(ms) |
+| --- | --- | --- | --- | --- |
+| hyper for kvm | yes | 352 | 391 | 376 |
+| hyper for kvm | no | 685 | 725 | 709 |
+| hyper for qemu | yes | 1348 | 1380 | 1367 |
+| hyper for qemu | no | 1773 | 1809 | 1787 |
+| hyper for xen | no | 2426 | 2486 | 2449 |
 
 
 
 ### 1.2 Pod replace time
 
-Replace a running Pod with a new one, only takes `95` ms.
+Replace a running Pod with a new one, only takes `150` ms.
 
 | -   | min(ms) | max(ms) | avg(ms) |
 | --- | --- | --- | --- |
-| replace time | 80 | 107 | 95 |
+| replace time | 128 | 171 | 150 |
 
 
+## 2. Density Test
 
-## 2. Memory Utilization
+Create VM/pod ceaselessly, until "Cannot allocate memory" occur.
 
-### 2.1 Minimum startup memory
+### 2.1 Test environment
+
+  - Total physical memory  
+  	`16`GB
+  - Allocation of resources  
+  	`1` vCPU, `512`MB Memory
+  - Test docker image  
+  	ubuntu:14.04 - https://registry.hub.docker.com/_/ubuntu/
+  - Test kvm image  
+  	http://cloud-images.ubuntu.com/releases/14.04/release-20150706/ubuntu-14.04-server-cloudimg-amd64-disk1.img
+
+
+### 2.2 Result
+
+In the same condition, Hyper can run more pods than traditional VM, and there are more Free memory for user application.
+
+#### 2.2.1 Traditional VM(kvm)
+
+Max VM(kvm) Number : `105`
+
+> **QEMU process memory usage**(MB): ( 105 qemu process )
+
+|  -  | min | max | avg |
+| --- | --- | --- | --- |
+|RSS(VmRSS) |    70 |   184 |   `156` |
+|VSZ(VmSize)|   928 |   928 |   928 |
+
+> **memory usage in VM** (MB): ( 105 running VM )
+
+|  -  | min | max | avg |
+| --- | --- | --- | --- |
+|Total|   490 |   490 |   490 |
+|Used |    342 |    344 |    `343` |
+|Free |   145 |   147 |   `146` |
+
+
+#### 2.2.2 Hyper pod
+
+Max pod(Hyper) Number : `252`
+
+> **QEMU process memory usage**(MB): ( 252 qemu process )
+
+|  -  | min | max | avg |
+| --- | --- | --- | --- |
+|RSS(VmRSS) |    61 |    75 |    `69` |
+|VSZ(VmSize)|   994 |  1066 |   995 |
+
+> **memory usage in pod** (MB): ( 252 running hyper pod )
+
+|  -  | min | max | avg |
+| --- | --- | --- | --- |
+|Total|   498 |   498 |   498 |
+|Used |    14 |    14 |    `14` |
+|Free |   484 |   484 |   `484` |
+
+
+## 3. Memory Utilization
+
+### 3.1 Minimum startup memory
 
 The minimum startup memory is `28`(MB)
 
 
-### 2.2 QEMU process memory usage
+### 3.2 QEMU process memory usage
 
-When starting a Pod with minimum startup memory, QEMU process uses `49`MB physical memory in Host OS.
-
-|  -  | min(MB) | max(MB) | avg(MB) |
-| --- | --- | --- | --- |
-|RSS(VmRSS) |    48 |    50 |    49 |
-|VSZ(VmSize)|   437 |   438 |   438 |
-
-
-### 2.3 Memory usage in Pod
-
-When start a Pod with minimum startup memory, there will be `9`MB free memory in a running Pod. Hyper Kernel only takes `11`MB memory.
+When starting a Pod with minimum startup memory, QEMU process uses `50`MB physical memory in Host OS.
 
 |  -  | min(MB) | max(MB) | avg(MB) |
 | --- | --- | --- | --- |
-|Total|    21 |    21 |    21 |
-|Used |    11 |    11 |    11 |
-|Free |     9 |    10 |     9 |
+|RSS(VmRSS) |    49 |    53 |    50 |
+|VSZ(VmSize)|   510 |   582 |   512 |
+
+
+### 3.3 Memory usage in Pod
+
+When start a Pod with minimum startup memory, there will be `6`MB free memory in a running Pod. Hyper Kernel only takes `13`MB memory.
+
+|  -  | min(MB) | max(MB) | avg(MB) |
+| --- | --- | --- | --- |
+|Total|    19 |    19 |    19 |
+|Used |    13 |    13 |    13 |
+|Free |     6 |    6 |     6 |
 
 
 
-## 3. CPU Performance
+## 4. CPU Performance
 
-Allocation of resources: 2 CPU, 2048GB Memory
+Allocation of resources: `1` vCPU, `2048`GB Memory
 
-The following table is the result of sysbench CPU performance test. CPU performances in hyper are pretty close to Host OS.
+The following table is the result of `dhrystone` CPU performance test.
 
-| target| num-threads| cpu-max-prime| total time(sec)| resp min(ms)| resp avg(ms)| resp max(ms)|
-| --- | --- |--- |--- |--- |--- |--- |
-| host| 1 | 10000| 9.88 | 0.95 | 0.99 | 1.01 |
-| docker| 1 | 10000| 9.89 | 0.95 | 0.99 | 1.12 |
-| hyper| 1 | 10000| 9.92 | 0.95 | 0.99 | 1.28 |
-| host| 2 | 50000| 45.81 | 8.51 | 9.16 | 9.39 |
-| docker| 2 | 50000| 45.83 | 8.50 | 9.16 | 13.17 |
-| hyper| 2 | 50000| 45.97 | 8.95 | 9.19 | 10.22 |
+| - | DMIPS(avg) |
+| --- | --- |
+| host | 24938 |
+| docker | 24875 |
+| hyper | 24817 |
 
 > In the target column,  `host` means Host OS, `docker` means docker container, `hyper` means hyper Pod
 
-## 4. Memory Performance
 
-Allocation of resources: 2 CPU, 2048GB Memory
-Test parameter: 1MB block size, transfer datasize is 100GB.
+The following table is the result of `whetstone` CPU performance test.
 
-The following table is the result of sysbench memory performance test.
-
-| target | num-threads |  rnd-read(MB/sec) | rnd-write(MB/sec) | seq-read(MB/sec) | seq-write(MB/sec) |
-| --- | --- | --- |--- |--- |--- |
-| host | 1 | 11497 | 11489 | 11487 | 11513 | 11496 |
-| docker | 1 | 11494 | 11491 | 11494 | 11505 | 11496 |
-| hyper | 1 | 11417 | 11439 | 11418 | 11419 | 11423 |
-| host | 2 |22926 | 22835 | 22694 | 22770 | 22806 |
-| docker | 2 | 22593 | 22828 | 22629 | 22900 | 22737 |
-| hyper | 2 | 22608 | 22647 | 22737 | 22741 | 22683 |
+| - | MFLOPS(avg) |
+| --- | --- |
+| host | 5064 |
+| docker | 5056 |
+| hyper | 5050 |
 
 
 
-## 5. Testing environment
+## 5. Memory Performance
 
-Bare Metal Server on SoftLayer.
+Allocation of resources: `1` vCPU, `4096`GB Memory
 
+
+The following table is the result of stream memory performance test.
+
+| - | Add(GB/s) |  Copy(GB/s) | Scale(GB/s) | Triad(GB/s) |
+| --- | --- | --- |--- |--- |
+| host | 13.03 | 12.78 | 12.70 | 13.10 |
+| docker | 12.98 | 12.67 | 12.62 | 12.87 |
+| hyper | 12.80 | 12.56 | 12.66 | 12.81 |
+
+
+## 6. Testing environment
+
+Bare Metal Server(Type 1) on `packet.net`
 
 | - | Configuration |
 | --- | --- |
-| Server | Single Processor Quad Core Xeon 1270 V3 - 3.50GHz - 1 x 8MB cache |
-| RAM | 32 GB RAM |
-| OS | Ubuntu Linux 14.04 LTS Trusty Tahr (64 bit) |
-| Disk | 400 GB SSD |
-| Uplink Port Speeds | 100 Mbps Public & Private Network Uplinks |
+| Server | E3-1240 v3 @ 3.4 Ghz |
+| RAM | 16GB DDR3-1333 RAM |
+| OS | Ubuntu 14.04.2 LTS (64 bit) |
+| Disk | 2 x 120GB Enterprise SSDs |
+| Network | 2 x 1Gbps Bonded Network |
 
-> Detailed configuration: https://www.softlayer.com/Store/orderHourlyBareMetalInstance/37278/66
+> Detailed configuration: https://www.packet.net/pricing/
