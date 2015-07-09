@@ -5,7 +5,7 @@
 
 ### 1.1 Pod startup time
 
-Run a new Pod only takes `376` millisecond(ms).
+Run a new Pod only takes `376` millisecond (ms).
 
 | - | with-qboot | min(ms) | max(ms) | avg(ms) |
 | --- | --- | --- | --- | --- |
@@ -28,36 +28,36 @@ Replace a running Pod with a new one, only takes `150` ms.
 
 ## 2. Density Test
 
-Create VM/pod ceaselessly, until "Cannot allocate memory" occur.
+Create VM/pod ceaselessly, until "Cannot allocate memory" occurs.
 
 ### 2.1 Test environment
 
-  - Total physical memory  
+  - Total of physical memory  
   	`16`GB
   - Allocation of resources  
   	`1` vCPU, `512`MB Memory
-  - Test docker image  
+  - Test Docker image  
   	ubuntu:14.04 - https://registry.hub.docker.com/_/ubuntu/
-  - Test kvm image  
+  - Test KVM image  
   	http://cloud-images.ubuntu.com/releases/14.04/release-20150706/ubuntu-14.04-server-cloudimg-amd64-disk1.img
 
 
 ### 2.2 Result
 
-In the same condition, Hyper can run more pods than traditional VM, and there are more Free memory for user application.
+In the same condition, Hyper can run more Pods than traditional VMs, and there is more available memory for user's applications.
 
 #### 2.2.1 Traditional VM(kvm)
 
-Max VM(kvm) Number : `105`
+Max VM(KVM) number : `105`
 
-> **QEMU process memory usage**(MB): ( 105 qemu process )
+> **QEMU process memory usage**(MB): (105 qemu processes)
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
 |RSS(VmRSS) |    70 |   184 |   `156` |
 |VSZ(VmSize)|   928 |   928 |   928 |
 
-> **memory usage in VM** (MB): ( 105 running VM )
+> **memory usage in VM** (MB): (105 running VMs)
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
@@ -68,16 +68,16 @@ Max VM(kvm) Number : `105`
 
 #### 2.2.2 Hyper pod
 
-Max pod(Hyper) Number : `252`
+Max Pod(Hyper) number : `252`
 
-> **QEMU process memory usage**(MB): ( 252 qemu process )
+> **QEMU process memory usage**(MB): (252 qemu processes)
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
 |RSS(VmRSS) |    61 |    75 |    `69` |
 |VSZ(VmSize)|   994 |  1066 |   995 |
 
-> **memory usage in pod** (MB): ( 252 running hyper pod )
+> **memory usage in Pod** (MB): (252 running Hyper Pods)
 
 |  -  | min | max | avg |
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ The minimum startup memory is `28`(MB)
 
 ### 3.2 QEMU process memory usage
 
-When starting a Pod with minimum startup memory, QEMU process uses `50`MB physical memory in Host OS.
+When starting a Pod with minimum startup memory, QEMU process uses `50`MB of the host OS' physical memory.
 
 |  -  | min(MB) | max(MB) | avg(MB) |
 | --- | --- | --- | --- |
@@ -105,7 +105,7 @@ When starting a Pod with minimum startup memory, QEMU process uses `50`MB physic
 
 ### 3.3 Memory usage in Pod
 
-When start a Pod with minimum startup memory, there will be `6`MB free memory in a running Pod. Hyper Kernel only takes `13`MB memory.
+When starting a Pod with minimum startup memory, there will be `6`MB of available memory in a running Pod. Hyper Kernel only takes `13`MB of memory.
 
 |  -  | min(MB) | max(MB) | avg(MB) |
 | --- | --- | --- | --- |
@@ -117,7 +117,7 @@ When start a Pod with minimum startup memory, there will be `6`MB free memory in
 
 ## 4. CPU Performance
 
-Allocation of resources: `1` vCPU, `2048`GB Memory
+Allocation of resources: `1` vCPU, `2048`MB of Memory
 
 The following table is the result of `dhrystone` CPU performance test.
 
@@ -127,7 +127,7 @@ The following table is the result of `dhrystone` CPU performance test.
 | docker | 24875 |
 | hyper | 24817 |
 
-> In the target column,  `host` means Host OS, `docker` means docker container, `hyper` means hyper Pod
+> In the target column,  `host` means Host OS, `docker` means Docker container, `hyper` means Hyper Pod
 
 
 The following table is the result of `whetstone` CPU performance test.
@@ -142,8 +142,7 @@ The following table is the result of `whetstone` CPU performance test.
 
 ## 5. Memory Performance
 
-Allocation of resources: `1` vCPU, `4096`GB Memory
-
+Allocation of resources: `1` vCPU, `4096`MB of Memory
 
 The following table is the result of stream memory performance test.
 
