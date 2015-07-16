@@ -71,3 +71,11 @@ And build with autotools
 
 Then you can find `hyper-initrd.img` in build directory, together with a pre-build `kernel`. You can also found the `kernel_config` in the repo.
 
+#### Build Your Own Kernel
+
+You can reference the [hyper kernel configuration](https://github.com/hyperhq/hyperstart/blob/master/build/kernel_config),
+and for Qemu/Kvm driver, you'd better build new CBFS rom with `make cbfs`, which will add kernel in `build/` and initramfs
+into a CBFS ROM. 
+
+You can find related configuration items in [the config file](../reference/configuration.html).
+
