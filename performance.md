@@ -1,10 +1,10 @@
 # Performance
 
->The following tests are executed on the bare metal server of [`packet.net`](http://www.packet.net)
+>The following test was executed on the bare metal server of [`packet.net`](http://www.packet.net)
 
  - `Type 1` : 8vCPU(3.4 Ghz) + 16GB(DDR3) + SSDs(2x120GB)
 
- - `Type 3` : 32vCPU(2.6 Ghz) + 128GB(DDR4) + SSDs(2x120GB)
+ - `Type 3` : 32vCPU(2.6 Ghz) + 128GB(DDR4) + SSDs(2x120GB) + NVMe(2x800GB)
 
 ## 1. Time
 
@@ -226,7 +226,7 @@ The following table is the result of stream memory performance test on `Type 3`
 | Server | E3-1240 v3 @ 3.4 Ghz | 2 x E5-2640 v3 @ 2.6 Ghz |
 | RAM | 16GB DDR3-1333 RAM | 128GB DDR4-2100 RAM |
 | OS | Ubuntu 14.04.2 LTS (64 bit) | Ubuntu 14.04.2 LTS (64 bit) |
-| Disk | 2 x 120GB Enterprise SSDs | 2 x 120GB Enterprise SSDs |
+| Disk | 2 x 120GB Enterprise SSDs | 2 x 120GB Enterprise SSDs + 2 x 800GB NVMe Flash Drives |
 | Network | 2 x 1Gbps Bonded Network | 2 x 10GBit SFP+ Bonded Network |
 
 > Detailed configuration: https://www.packet.net/pricing/
