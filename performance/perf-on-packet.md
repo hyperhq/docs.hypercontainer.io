@@ -1,12 +1,10 @@
 # Performance
 
->The following test was executed on the bare metal server of [`packet.net`](http://www.packet.net)
-
- - `Type 1` : 8vCPU(3.4 Ghz) + 16GB(DDR3) + SSDs(2x120GB)
-
+>The following test was executed on [`Packet`](http://www.packet.net) bare metal server  
+ - `Type 1` : 8vCPU(3.4 Ghz) + 16GB(DDR3) + SSDs(2x120GB)  
  - `Type 3` : 32vCPU(2.6 Ghz) + 128GB(DDR4) + SSDs(2x120GB) + NVMe(2x800GB)
 
->To see [test result](performance.md) on IBM SoftLayer bare metal server
+>To see [test result](perf-on-softlayer.md) on IBM SoftLayer bare metal server
 
 ## 1. Time
 

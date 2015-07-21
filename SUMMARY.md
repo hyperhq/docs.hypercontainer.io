@@ -4,6 +4,8 @@
    * [How it works](how_it_works.md)
    * [Why Hyper](why_hyper.md)
    * [Performance](performance.md)
+      * [ IBM SoftLayer ](performance/perf-on-softlayer.md)
+      * [ Packet ](performance/perf-on-packet.md)
 * [Get Started](get_started/README.md)
    * [Install](get_started/install.md)
    * [Pod](get_started/pod.md)
