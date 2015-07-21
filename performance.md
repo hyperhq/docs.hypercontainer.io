@@ -15,7 +15,7 @@ Run a new Pod only takes `336` millisecond(ms).
 | --- | --- | --- | --- |
 | startup time  | 314 | 366 | 336 |
 
-
+>The following tests are for "hyper for kvm" with qboot
 
 ### 1.2 Pod replace time
 
