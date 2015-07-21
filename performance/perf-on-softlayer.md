@@ -1,9 +1,9 @@
 # Performance
 
->The following test was executed on the IBM SoftLayer bare metal server  
+>The following test was executed on the IBM SoftLayer Bare Metal Server  
   - `Single Intel Xeon E3-1270 v3` : 8vCPU(3.50 GHz) + 32GB(DDR3) + SSDs(400GB)
 
->To see [test result](perf-on-packet.md) on `Packet` bare metal server
+>To see [test result](perf-on-packet.md) on `Packet` Bare Metal Server
 
 
 ## 1. Time
@@ -17,7 +17,7 @@ Run a new Pod only takes `336` millisecond(ms).
 | --- | --- | --- | --- |
 | startup time  | 314 | 366 | 336 |
 
->The following tests are for "hyper for kvm" with qboot
+>The following tests are for "Hyper for KVM" with qboot
 
 ### 1.2 Pod replace time
 
@@ -62,18 +62,18 @@ When start a Pod with minimum startup memory, there will be `9`MB free memory in
 
 Allocation of resources: 2 CPU, 2048GB Memory
 
-The following table is the result of sysbench CPU performance test. CPU performances in hyper are pretty close to Host OS.
+The following table is the result of sysbench CPU performance test. CPU performances in Hyper are pretty close to Host OS.
 
-| target| num-threads| cpu-max-prime| total time(sec)| resp min(ms)| resp avg(ms)| resp max(ms)|
+| Target| num-threads| cpu-max-prime| total time(sec)| resp min(ms)| resp avg(ms)| resp max(ms)|
 | --- | --- |--- |--- |--- |--- |--- |
-| host| 1 | 10000| 9.88 | 0.95 | 0.99 | 1.01 |
-| docker| 1 | 10000| 9.89 | 0.95 | 0.99 | 1.12 |
-| hyper| 1 | 10000| 9.92 | 0.95 | 0.99 | 1.28 |
-| host| 2 | 50000| 45.81 | 8.51 | 9.16 | 9.39 |
-| docker| 2 | 50000| 45.83 | 8.50 | 9.16 | 13.17 |
-| hyper| 2 | 50000| 45.97 | 8.95 | 9.19 | 10.22 |
+| Host| 1 | 10000| 9.88 | 0.95 | 0.99 | 1.01 |
+| Docker| 1 | 10000| 9.89 | 0.95 | 0.99 | 1.12 |
+| Hyper| 1 | 10000| 9.92 | 0.95 | 0.99 | 1.28 |
+| Host| 2 | 50000| 45.81 | 8.51 | 9.16 | 9.39 |
+| Docker| 2 | 50000| 45.83 | 8.50 | 9.16 | 13.17 |
+| Hyper| 2 | 50000| 45.97 | 8.95 | 9.19 | 10.22 |
 
-> In the target column,  `host` means Host OS, `docker` means docker container, `hyper` means hyper Pod
+> In the Target column,  `Host` means Host OS, `Docker` means Docker container, `Hyper` means Hyper Pod
 
 ## 4. Memory Performance
 
@@ -82,14 +82,14 @@ Test parameter: 1MB block size, transfer datasize is 100GB.
 
 The following table is the result of sysbench memory performance test.
 
-| target | num-threads |  rnd-read(MB/sec) | rnd-write(MB/sec) | seq-read(MB/sec) | seq-write(MB/sec) |
+| Target | num-threads |  rnd-read(MB/sec) | rnd-write(MB/sec) | seq-read(MB/sec) | seq-write(MB/sec) |
 | --- | --- | --- |--- |--- |--- |
-| host | 1 | 11497 | 11489 | 11487 | 11513 | 11496 |
-| docker | 1 | 11494 | 11491 | 11494 | 11505 | 11496 |
-| hyper | 1 | 11417 | 11439 | 11418 | 11419 | 11423 |
-| host | 2 |22926 | 22835 | 22694 | 22770 | 22806 |
-| docker | 2 | 22593 | 22828 | 22629 | 22900 | 22737 |
-| hyper | 2 | 22608 | 22647 | 22737 | 22741 | 22683 |
+| Host | 1 | 11497 | 11489 | 11487 | 11513 | 11496 |
+| Docker | 1 | 11494 | 11491 | 11494 | 11505 | 11496 |
+| Hyper | 1 | 11417 | 11439 | 11418 | 11419 | 11423 |
+| Host | 2 |22926 | 22835 | 22694 | 22770 | 22806 |
+| Docker | 2 | 22593 | 22828 | 22629 | 22900 | 22737 |
+| Hyper | 2 | 22608 | 22647 | 22737 | 22741 | 22683 |
 
 
 
