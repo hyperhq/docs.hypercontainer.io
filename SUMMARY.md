@@ -30,6 +30,7 @@
    * [Config](reference/configuration.md)
    * [License](license.md)
 * [Trouble Shooting](trouble_shooting/README.md)
+   * [Platform Independent FAQ](trouble_shooting/general.md)
    * [Qemu/KVM FAQ](trouble_shooting/qemu.md)
    * [Xen FAQ](trouble_shooting/xen.md)
 * [Release Notes](release_notes/README.md)
