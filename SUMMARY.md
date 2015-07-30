@@ -33,6 +33,8 @@
        * [commit](reference/commit.md)
        * [build](reference/build.md)
        * [push](reference/push.md)
+       * [login](reference/login.md)
+       * [logout](reference/logout.md)
    * [API](reference/api.md)
    * [Config](reference/configuration.md)
    * [License](license.md)
