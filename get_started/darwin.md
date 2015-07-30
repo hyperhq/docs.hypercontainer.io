@@ -2,6 +2,12 @@
 
 This page introduces the daily usage of Hyper for Mac. If you meet any problem not described here, see the [trouble shooting page](../trouble_shooting/darwin.md).
 
+## Install
+
+To install Hyper on Mac OS X, you need first to install VirtualBox 5.0, then download and Install the [hyper-mac.pkg](http://hyper-install.s3.amazonaws.com/hyper-mac.pkg)
+
+![Hyper for Mac](https://trello-attachments.s3.amazonaws.com/55b62cf71a91815134fb04d1/620x438/1777c86bec3f4ca95ff9ff5eb8552c39/Install_Hyper_2015-07-30_00-50-54.png)
+
 ## Command Line
 
 Hyper for Mac supports the following subcommands in current version.
@@ -22,7 +28,7 @@ Hyper for Mac supports the following subcommands in current version.
 	  rmi                    Remove one or more images
 	  run                    Create a pod, and launch a new pod
 	  start                  Launch a 'pending' pod
-	  stop                   Stop a running pod, it will become 'pending' 
+	  stop                   Stop a running pod, it will become 'pending'
 
 All the commands support `-h` flag for further information. Specially, the run command supports `-p` flag to run a pod, there are example pods under `/opt/hyper/examples/`.
 
@@ -54,11 +60,11 @@ And use the following command to check the daemon status.
 
 ## Update and Re-Install
 
-Hyper for Mac package can be re-installed, re-install won't cause data loss. 
+Hyper for Mac package can be re-installed, re-install won't cause data loss.
 
 ## Uninstall
 
-Hyper for Mac package ships an uninstall script at `/opt/hyper/bin/uninstall-hyper.sh`. 
+Hyper for Mac package ships an uninstall script at `/opt/hyper/bin/uninstall-hyper.sh`.
 
 - with `--purge` flag, it will delete hyper and all images and containers
 - without the flag, it will keep the images and containers.
