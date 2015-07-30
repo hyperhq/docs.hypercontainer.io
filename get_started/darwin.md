@@ -2,6 +2,8 @@
 
 This page introduces the daily usage of Hyper for Mac. If you meet any problem not described here, see the [trouble shooting page](../trouble_shooting/darwin.md).
 
+Mac OS X has been introduced in [Hyper v0.3](https://docs.hyper.sh/release_notes/v0.3.html)
+
 ## Install
 
 To install Hyper on Mac OS X, you need first to install VirtualBox 5.0, then download and Install the [hyper-mac.pkg](http://hyper-install.s3.amazonaws.com/hyper-mac.pkg)
