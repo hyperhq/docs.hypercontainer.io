@@ -12,48 +12,48 @@ This is the API reference of `hyperd` based on [The latest release](../release_n
 
 ### 2. Endpoints
 #### 2.1 Pod
-##### Create pod
+##### Create Pod
 `POST /pod/create`
 
-Create a pod
+Create a Pod
 
 **Example request:**
 
 `POST /pod/create?podArgs=****`
 
-The argument is a string, which converts the pod's json to a string.
-##### Start pod
+The argument is a string, which converts the Pod's json to a string.
+##### Start Pod
 `POST /pod/start`
 
-Start a pod
+Start a Pod
 
 **Example request:**
 
 `POST /pod/start?podId=pod-xxxxxxxxxx&vmId=vm-xxxxxxxxxx`
 
 If the VM id is empty (""), then it will create a new VM.
-##### Stop pod
+##### Stop Pod
 `POST /pod/stop`
 
-Stop a pod
+Stop a Pod
 
 **Example request:**
 
 `POST /pod/stop?podId=pod-xxxxxxxxxx&stopVM=yes`
 
-The `stopVM` property can be `yes` or `no`; it will destroy the VM associated with the pod if its value is `yes`
+The `stopVM` property can be `yes` or `no`; it will destroy the VM associated with the Pod if its value is `yes`
 
-##### Destroy pod
+##### Destroy Pod
 `POST /pod/remove`
 
-Destroy a pod
+Destroy a Pod
 
 **Example request:**
 
 `POST /pod/remove?podId=pod-xxxxxxxxxx`
 
 
-##### List pods
+##### List Pods
 `GET /list`
 
 List pods
@@ -258,4 +258,3 @@ Get the default username and email
     	"serveraddress": "https://index.docker.io/v1/"
 	}
 ```
-

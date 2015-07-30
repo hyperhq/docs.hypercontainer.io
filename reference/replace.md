@@ -2,7 +2,7 @@
 
 Deallocate the VM instance from a `Running` Pod A and re-assign to a `Created` Pod B. Pod A will return to `Created` state
 
-(This command is only avaiable for Linux version)
+(This command is only avaiable on Linux version)
 
 	Usage:
 	  hyper replace --oldpod POD_ID --newpod POD_ID [--file POD_FILE]

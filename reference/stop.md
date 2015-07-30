@@ -1,6 +1,6 @@
 # stop
 
-Stop a `Running` pod, which will return to `Created` state
+Stop a `Running` Pod, which will return to `Created` state
 
 	Usage:
 	  hyper stop POD_ID

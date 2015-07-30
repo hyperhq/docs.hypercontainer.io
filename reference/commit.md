@@ -2,7 +2,7 @@
 
 Create a new image from a container's changes
 
-(This command is only available for Mac version)
+(This command is only available on Mac OS X version)
 
 ```
 Usage:

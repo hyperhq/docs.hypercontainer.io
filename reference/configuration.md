@@ -4,13 +4,13 @@
 
 The configuration file of Hyper is located under `/etc/hyper.conf`. The file is in INI format：
 
-	Host   = tcp://localhost:1246
+    Host   = tcp://localhost:1246
     Bios   = /var/lib/hyper/bios.bin
     Cbfs   = /var/lib/hyper/cbfs.rom
     Kernel = /var/lib/hyper/kernerl-4.0.1
     Initrd = /var/lib/hyper/initrd.img
     Bridge = hyper0
-	BridgeIP = 192.168.123.1/24
+    BridgeIP = 192.168.123.1/24
 
 #### Parameters
 

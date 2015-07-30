@@ -6,7 +6,7 @@
 
 - `command`: the shell command to run when the container starts
 
-- `entryPoint`: the executable to run when the container starts 
+- `entryPoint`: the executable to run when the container starts
     - The `command` will be appended to `entryPoint` as parameters if `entryPoint` is not empty.
 
 - `workdir`: the directory running the container command

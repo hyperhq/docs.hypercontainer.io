@@ -38,4 +38,4 @@ The `files` section is a list of items with the following properties:
 
 - `content`: specify the content of the file
 
-> One file can be shared by multiple containers in a pod with different `path` and `perm`. Therefore, any changes to the file content will be visible across the entire pod.
+> One file can be shared by multiple containers in a Pod with different `path` and `perm`. Therefore, any changes to the file content will be visible across the entire Pod.
