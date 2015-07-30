@@ -2,11 +2,11 @@
 
 Pod is a concept originated from [Google](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md). According to [Google Kuberenetes](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md):
 
-    In Kubernetes, rather than individual application containers, pods are the smallest deployable units that can be created, scheduled, and managed.
+    In Kubernetes, rather than individual application containers, Pods are the smallest deployable units that can be created, scheduled, and managed.
 
-    A pod (as in a pod of whales or pea pod) corresponds to a colocated group of applications running with a shared context. Within that context, the applications may also have individual cgroup isolations applied. A pod models an application-specific "logical host" in a containerized environment. It may contain one or more applications which are relatively tightly coupled -- in a pre-container world, they would have executed on the same physical or virtual host.
+    A Pod (as in a pod of whales or pea pod) corresponds to a colocated group of applications running with a shared context. Within that context, the applications may also have individual cgroup isolations applied. A Pod models an application-specific "logical host" in a containerized environment. It may contain one or more applications which are relatively tightly coupled -- in a pre-container world, they would have executed on the same physical or virtual host.
 
-The key idea behind **Pod** is that in a microservie architecture usually involves some "helper" programs, such as log, monitoring, cron, etc. These helper programs are built to work cooperatively with the app. Therefore, instead of running in multiple isolated containers, these processes should share the namespace, though they are packaged in different images.
+The key idea behind **Pod** is that in a microservice architecture usually involves some "helper" programs, such as log, monitoring, cron, etc. These helper programs are built to work cooperatively with the app. Therefore, instead of running in multiple isolated containers, these processes should share the namespace, though they are packaged in different images.
 
 ## Pod is the first class in Hyper
 
@@ -20,12 +20,8 @@ Inside of the instance, multiple applications from different images share the na
 - Processes can use all IPC facilities to communicate
 - Processes share the same hostname
 - Processes have access to all NICs attached to the instance, and share the same port range
-- Processes have access to all disk  attached to the instance
+- Processes have access to all disk attached to the instance
 
 The exception is ***`Mount`***. Since a Pod may have multiple app images, Hyper applies the ***`Mount`*** namespace to isolate the root filesystem from each other.
 
 Note: Hyper is immune from [Pid  1 problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/), since HyperStart launches the app processes and continues to live in the same namespace with them.
-
-
-
-
