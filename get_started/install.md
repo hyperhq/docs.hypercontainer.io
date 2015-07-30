@@ -1,12 +1,14 @@
 # Install
 
-### Requirements
+## Requirements
 
-- QEMU 2.0 or later
 - Docker 1.5 or later
-- Xen 4.5 or later (for Xen support)
+- Hypervisor
+  - [Linux] QEMU 2.0 or later
+  - [Linux] Xen 4.5 or later (for Xen support)
+  - [Mac OS X] VirtualBox 5.0
 
-### Setup
+## Install on Linux
 
 To set Hyper up, simply (kvm version)
 
@@ -32,7 +34,21 @@ Please note that [the current version](../release_notes/latest.md) supports the 
     - 8.0 jessie
     - 7.x wheezy (upgrade to QEMU 2.0)
 
-### Build from source
+## Install on Mac
+
+To install Hyper for Mac, you need install VirtualBox 5.0, then download and Install the [hyper-mac.pkg](http://hyper-install.s3.amazonaws.com/hyper-mac.pkg)
+
+![Hyper for Mac](https://trello-attachments.s3.amazonaws.com/55b62cf71a91815134fb04d1/620x438/1777c86bec3f4ca95ff9ff5eb8552c39/Install_Hyper_2015-07-30_00-50-54.png)
+
+The Hyper Mac contains 
+
+- `hyperd` Daemon, which could be controled with `launchctl`
+- `hyper` cli tool with
+- An uninstall shell script at `/opt/hyper/bin/uninstall-hyper.sh`
+
+> If you need uninstall hyper and clean all existing images and containers, call the uninstall script with `--purge` flag. 
+
+## Build from source
 
 #### Daemon and CLI client:
 
