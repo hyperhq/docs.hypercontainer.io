@@ -59,7 +59,7 @@ Hyper Daemon is running as `root`, you can use `sudo vboxmanage list vms` to fin
 
 #### What is VM `hyper-mac-pull` VM, is it necessary?
 
-It helps to build the image layers downloaded from Hubs, and helps to manage the defferencing images. It is configured with 64MB memory. Thanks to the fact Hyper is run on hypervisor and supports hot-plug, hyper can use a light weight Hyper VM to manage images in a disk-efficiently and cross-platform way.
+It helps to build the image layers downloaded from Hubs, and helps to manage the differencing images. It is configured with 64MB memory. Thanks to the fact Hyper is run on hypervisor and supports hot-plug, hyper can use a light weight Hyper VM to manage images in a disk-efficiently and cross-platform way.
 
 Due to the restrictions from VirtualBox and Mac OS X, it is the necessary way to balance the disk consumption, compatibility, and memory.
 
