@@ -48,6 +48,8 @@ The Hyper Mac contains
 
 > If you need uninstall hyper and clean all existing images and containers, call the uninstall script with `--purge` flag. 
 
+> VirtualBox is an open source hypervisor by Oracle.
+
 ## Build from source
 
 #### Daemon and CLI client:

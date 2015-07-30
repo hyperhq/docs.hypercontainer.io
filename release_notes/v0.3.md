@@ -21,3 +21,5 @@ These features are shipped with Mac version and will return to the linux version
 - Many bug fix.
 
 More details on the web site [(http://hyper.sh)](http://hyper.sh/).
+
+> VirtualBox is an open source hypervisor by Oracle.
