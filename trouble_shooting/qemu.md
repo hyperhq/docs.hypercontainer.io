@@ -8,6 +8,6 @@ If the VirtualBox (Oracle VM) is started with a kernel extension, it will occupy
 
 ## Build from Source
 
-#### I build my own qemu 2.x, but cannot run Hyper Pod
+#### I built my own Qemu 2.x, but cannot run Hyper Pod
 
 The default Qemu configuration does not include virtfs support, configure it with `--enable-virtfs` to enable it.
