@@ -10,7 +10,7 @@
    * [Install](get_started/install.md)
    * [Pod](get_started/pod.md)
    * [Lifecycle](get_started/lifecycle.md)
-   * [Hyper Mac](get_started/darwin.md)
+   * [Get Started on Mac](get_started/darwin.md)
 * [Reference](reference/README.md)
    * [Podfile](reference/podfile.md)
        * [Containers](reference/containers.md)
