@@ -1,8 +1,8 @@
 # HyperVM
 
-HyperVM is the VM instances booted the minimalist HyperKernel. A HyperVM is loaded with a single [pod](../pod/README.md), which runs a group of containers.
+HyperVM is the VM instance booted by the minimalist HyperKernel. A HyperVM is loaded with a single [Pod](../pod/README.md), which runs a group of containers.
 
-, a Pod could run on top of a vm, and stop on it, and VM does not has persistent status, will be reclaim after shutdown.
+A Pod could run on top of a VM, or stop on it. A VM does not have persistent status: they will be reclaimed after shutdown.
 
 A running VM has 2 state:
 

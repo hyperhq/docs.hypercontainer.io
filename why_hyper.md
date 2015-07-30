@@ -13,7 +13,7 @@ Hyper is immune from the "*shared kernel*" problem in container, because virtual
 
 ## Portable
 
-Hyper is ***hypervisor agnostic***. [The current implementation](http://gnep.gitbooks.io/hyper/content/release_notes/index.html) supports KVM and Xen, with more in the roadmap. Combined with [the portability of App Container Image](https://github.com/appc), Hyper allows you to build, ship, run app anywhere, without worrying the infrastructure technology stack.
+Hyper is ***hypervisor agnostic***. [The current implementation](http://gnep.gitbooks.io/hyper/content/release_notes/index.html) supports KVM, Xen, and VirtualBox (according to the platform), with more in the roadmap. Combined with [the portability of App Container Image](https://github.com/appc), Hyper allows you to build, ship, run app anywhere, without worrying the infrastructure technology stack.
 
 ## Immutable
 
@@ -21,7 +21,7 @@ Hyper eliminates the need of Guest OS. There is no moving parts inside of a Hype
 
 ## BYOK - bring your own kernel
 
-In a multi-tenant environment, the platform must allow developers to pick different kernel and modules. This is an easy job in Hyper, but very hard to do in containers, due to the fact of ”sharing the host kernel".
+In a multi-tenant environment, the platform must allow developers to pick different kernel and modules. This is an easy job in Hyper, but very hard to do in containers, due to the fact of "sharing the host's kernel".
 
 ## Production Ready
 

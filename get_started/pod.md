@@ -1,10 +1,10 @@
-# What is Pod
+# What is a Pod
 
-Pod is a concept originated from [Google](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md). According to [Google Kuberenetes](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md):
+"Pod" is a concept originated from [Google](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md). According to [Google Kuberenetes](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/pods.md):
 
-> In Kubernetes, rather than individual application containers, pods are the smallest deployable units that can be created, scheduled, and managed.
+> In Kubernetes, rather than individual application containers, Pods are the smallest deployable units that can be created, scheduled, and managed.
 
-> A pod (as in a pod of whales or pea pod) corresponds to a colocated group of applications running with a shared context. Within that context, the applications may also have individual cgroup isolations applied. A pod models an application-specific "logical host" in a containerized environment. It may contain one or more applications which are relatively tightly coupled -- in a pre-container world, they would have executed on the same physical or virtual host.
+> A Pod (as in a pod of whales or pea pod) corresponds to a colocated group of applications running with a shared context. Within that context, the applications may also have individual cgroup isolations applied. A Pod models an application-specific "logical host" in a containerized environment. It may contain one or more applications which are relatively tightly coupled -- in a pre-container world, they would have executed on the same physical or virtual host.
 
 The key idea behind **Pod** is that in a microservie architecture usually involves some "helper" programs, such as log, monitoring, cron, etc. These helper programs are built to work cooperatively with the app. Therefore, instead of running in multiple isolated containers, these processes should share the namespace, though they are packaged in different images.
 

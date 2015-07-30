@@ -17,7 +17,7 @@ Performance-wise, **Hyper is super light**:
 - **Sub-second Boot**: milliseconds to launch a HyperVM instance
 - **Slimmed Footprint**: ~28 MB RAM (512MB on AWS EC2)
 
-With Hyper, the future of Container-as-a-Service  is just around the corner.
+With Hyper, the future of Container-as-a-Service is just around the corner.
 
 ![](https://trello-attachments.s3.amazonaws.com/552ba9ad83b51945d06ef23b/940x238/9e7346bfd21bc756361c70d8397e76f2/upload_2015-04-13_at_7.58.15_pm.png)
 
