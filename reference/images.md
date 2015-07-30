@@ -2,11 +2,11 @@
 
 List images
 
+(This command is only available for Mac version)
+
 ```
 Usage:
 	hyper images [OPTIONS] [REPOSITORY]
-
-List images
 
 Application Options:
 	-a, --all            Show all images (by default filter out the intermediate image layers) (false)

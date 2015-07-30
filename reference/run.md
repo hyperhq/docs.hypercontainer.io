@@ -16,6 +16,7 @@ Launch one or multiple Docker images as a Pod, with a new VM instance
 	  -e, --env=[]           Set environment variables
 	      --entrypoint=""    Overwrite the default ENTRYPOINT of the image
 	  -r, --restart=""       Restart policy to apply when a container exits (no, on-failure[:max-retry], always)
+	      --rm               Automatically remove the pod when it exits (only available for Mac verion)
 
 	Help Options:
 	  -h, --help             Show this help message

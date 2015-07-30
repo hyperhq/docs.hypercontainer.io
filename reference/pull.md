@@ -2,11 +2,11 @@
 
 Pull an image from a Docker registry server
 
+(This command is only available for Mac version)
+
 ```
 Usage:
 	hyper pull IMAGE
-
-Pull an image from a Docker registry server
 
 Help Options:
 	-h, --help  Show this help message
