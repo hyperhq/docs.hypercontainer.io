@@ -1,13 +1,13 @@
-# FAQ on Qemu/Kvm Support
+# FAQ on Qemu/KVM Support
 
 ## Start a Hyper Pod
 
-#### Fail to start hyper VM while there is a VirtualBox VM running.
+#### Fail to start Hyper VM while there is a VirtualBox VM running.
 
-If the virtualbox (Oracle VM) is started with kernel extension, it will occuppy the kvm device. If you want to run hyper, you should stop virtualbox, or disable the kernel extension of it, which will make the virtualbox vm run much slower.
+If the VirtualBox (Oracle VM) is started with a kernel extension, it will occupy the KVM device. If you want to run Hyper, you should stop VirtualBox, or disable its kernel extension, which will make the VirtualBox VM run much slower.
 
 ## Build from Source
 
-#### I build my own qemu 2.x, but can not run hyper pod
+#### I build my own qemu 2.x, but cannot run Hyper Pod
 
-The default qemu configurate does not include virtfs support, config it with `--enable-virtfs` to enable it.
+The default Qemu configuration does not include virtfs support, configure it with `--enable-virtfs` to enable it.
