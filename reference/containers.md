@@ -31,7 +31,7 @@
 example:
 
     "containers" : [{
-        "name":  "app",
+        "id":  "app",
         "image": "repo/image:tag",
         "command": ["/bin/sh"],
         "workdir": "/root",

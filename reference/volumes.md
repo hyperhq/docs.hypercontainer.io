@@ -3,7 +3,7 @@
 Similar with Docker, Hyper allows you to mount additional volumes to a HyperVM instance. To do this, simply define the volumes to be attached in `volumes` section, and reference the `volume` in `container` section:
 
     {
-        "name": "myweb",
+        "id": "myweb",
         "tty": true,
 
         "resource": {

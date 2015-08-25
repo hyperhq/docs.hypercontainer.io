@@ -3,7 +3,7 @@
 Hyper allows you to attach additional files to a HyperVM instance. To do this, simply define the files to be attached in `files` section, and reference the `filename` in `container` section:
 
     {
-        "name": "myweb",
+        "id": "myweb",
         "tty": true,
 
         "resource": {
@@ -14,14 +14,14 @@ Hyper allows you to attach additional files to a HyperVM instance. To do this, s
         "containers" : [{
             "image": "nginx:latest",
             "files":  [{
-	            "path": "/etc/nginx.conf",
-	            "filename": "prod_nginx.conf",                      # Reference here
+	            "path": "/etc/",
+	            "filename": "nginx.conf",                      # Reference here
 	            "perm": "0755"
 	        }]
         }],
 
         "files": [{                                                 # Definition
-	        "name": "prod_config.conf",
+	        "name": "nginx.conf",
 	        "encoding": "raw",
 	        "uri": "https://s3.amazonaws/bucket/file.conf",
 	        "content": ""
