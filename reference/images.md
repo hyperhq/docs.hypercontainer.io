@@ -2,8 +2,6 @@
 
 List images
 
-(This command is only available on Mac OS X version)
-
 ```
 Usage:
 	hyper images [OPTIONS] [REPOSITORY]
