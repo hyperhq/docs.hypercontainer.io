@@ -2,8 +2,6 @@
 
 Build a new image from the source code at PATH
 
-(This command is only available on Mac OS X version)
-
 ```
 Usage:
 	hyper build [OPTIONS] PATH

@@ -2,8 +2,6 @@
 
 Remove one or more images
 
-(This command is only available for on Mac OS X version)
-
 ```
 Usage:
 	hyper rmi [OPTIONS] IMAGE [IMAGE...]
