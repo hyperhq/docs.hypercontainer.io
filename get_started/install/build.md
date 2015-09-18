@@ -5,15 +5,20 @@
 Clone hyper in GoPath
 
     > cd ${GOPATH}/src
-	> git clone https://github.com/hyperhq/hyper.git hyper
+    > mkdir -p github.com/hyperhq
+    > cd github.com/hyperhq
+    > git clone https://github.com/hyperhq/hyper.git hyper
+    > git clone https://github.com/hyperhq/runv.git runv
 
-And make sure you have `go` (>= 1.4), `godep`, and `autotools`, go into the `hyper` dir
+And make sure you have `go` (>= 1.4) and `autotools`, develop files of
+`libdevmapper`, `libsqlite3`, then
 
+    > cd hyper
     > ./autogen.sh
     > ./configure
     > make
 
-(If you do not want to build with Xen support, use configure option `--without-xen`.)
+(If you want to build without Xen support, use configure option `--without-xen`.)
 
 Then you can get the binaries `hyperd` daemon and `hyper` CLI tool.
 
