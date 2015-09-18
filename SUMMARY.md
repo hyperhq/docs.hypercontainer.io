@@ -48,7 +48,7 @@
    * [Mac FAQ](trouble_shooting/darwin.md)
 * [Release Notes](release_notes/README.md)
    * [latest](release_notes/latest.md)
-   * [v0.4 (2015-09-15)](release_notes/v0.4.md)
+   * [v0.4 (2015-09-18)](release_notes/v0.4.md)
    * [v0.3 (2015-07-29)](release_notes/v0.3.md)
    * [v0.2 (2015-06-26)](release_notes/v0.2.md)
    * [v0.1 (2015-05-25)](release_notes/v0.1.md)
