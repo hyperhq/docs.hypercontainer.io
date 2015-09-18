@@ -6,15 +6,12 @@
   - [Linux] Xen 4.5 or later (for Xen support)
 
 ## Install
-To setup Hyper, simply run (KVM version)
+To setup Hyper, simply run (after 0.4, the same package support both
+  KVM and Xen)
 
     curl -sSL https://hyper.sh/install | bash
 
-or (xen version, includes KVM support too, but depends of Xen 4.5 library)
-
-    curl -sSL https://hyper.sh/install-xen | bash
-
-Don't like the "curl to bash" methods? Download tarballs here: [KVM version](http://hyper-install.s3.amazonaws.com/hyper-latest.tgz), [Xen version](http://hyper-install.s3.amazonaws.com/hyper-xen-latest.tgz).
+Don't like the "curl to bash" methods? Download [tarball here](http://hyper-install.s3.amazonaws.com/hyper-latest.tgz).
 
 Please note that [the current version](../release_notes/latest.md) supports the following Linux distros:
 
