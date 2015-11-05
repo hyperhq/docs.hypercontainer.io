@@ -44,13 +44,13 @@ Stop a Pod
 The `stopVM` property can be `yes` or `no`; it will destroy the VM associated with the Pod if its value is `yes`
 
 ##### Destroy Pod
-`POST /pod/remove`
+`DELETE /pod`
 
 Destroy a Pod
 
 **Example request:**
 
-`POST /pod/remove?podId=pod-xxxxxxxxxx`
+`DELETE /pod?podId=pod-xxxxxxxxxx`
 
 
 ##### List Pods
@@ -132,13 +132,13 @@ Create a VM
 `POST /vm/create`
 
 ##### Kill VM
-`POST /vm/kill`
+`DELETE /vm`
 
 Kill a VM
 
 **Example request:**
 
-`POST /vm/kill?vm=vm-xxxxxxxxxx`
+`DELETE /vm?vm=vm-xxxxxxxxxx`
 
 ##### List VMs
 `GET /list`
@@ -165,14 +165,47 @@ Query Parameters:
 all – yes or no, default no
 ```
 
+##### Create or pull an image
+`POST /image/create`
+
+Create an image, either by pulling it from the registry or by importing it
+
+**Example request:**
+
+`POST /image/create?imageName=ubuntu HTTP/1.1`
+
+**Example response:**
+```
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+
+    {"status": "Pulling..."}
+    {"status": "Pulling", "progress": "1 B/ 100 B", "progressDetail": {"current": 1, "total": 100}}
+    {"error": "Invalid..."}
+    ...
+
+When using this endpoint to pull an image from the registry, the
+`X-Registry-Auth` header can be used to include
+a base64-encoded AuthConfig object.
+```
+
+Query Parameters:
+
+```
+imageName – name of the image to pull
+
+Request Headers:
+X-Registry-Auth – base64-encoded AuthConfig object
+```
+
 ##### Remove an image
-`POST /images/remove`
+`DELETE /image`
 
 Remove an image
 
 **Example request:**
 
-`POST /images/remove?imageId=xxxxxxxxxxxx`
+`DELETE /image?imageId=xxxxxxxxxxxx`
 
 Query Parameters:
 
