@@ -16,7 +16,7 @@ Or, implicitly:
 
 	[root@user ~:]# hyper run ubuntu
 
-In both cases, Pods and VMs are inseverable. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`.
+In both cases, Pods and VMs are indivisible. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`.
 
 However, you can also create a Pod, but without an underlying VM. In such case, the pod stays in `Created` state.
 
