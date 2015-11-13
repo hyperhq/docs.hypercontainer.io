@@ -1,7 +1,6 @@
 ## Requirements
 
-- Docker 1.5 or later
-- Hypervisor
+- Hypervisor: at least one of
   - [Linux] QEMU 2.0 or later
   - [Linux] Xen 4.5 or later (for Xen support)
 
@@ -19,10 +18,12 @@ Please note that [the current version](../release_notes/latest.md) supports the 
 	- 15.04 Vivid
 	- 14.10 Utopic
 	- 14.04 Trusty
-- CentOS 64bit
+- CentOS 64bit (manually build QEMU 2.0 or above)
 	- 7.0
-	- 6.x (upgrade to QEMU 2.0)
+	- 6.x
 - Fedora 20-22 64bit
 - Debian 64bit
     - 8.0 jessie
     - 7.x wheezy (upgrade to QEMU 2.0)
+
+If you build Qemu from source, don't forget enable virtfs (`--enable-virtfs`) during configuration.

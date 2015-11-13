@@ -14,7 +14,7 @@ A Pod can be launched either explicitly:
 
 Or, implicitly:
 
-	[root@user ~:]# hyper run ubuntu
+	[root@user ~:]# hyper run -t ubuntu
 
 In both cases, Pods and VMs are indivisible. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`.
 
