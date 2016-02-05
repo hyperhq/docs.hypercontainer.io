@@ -17,8 +17,8 @@
 * [Reference](reference/README.md)
    * [Podfile](reference/podfile.md)
        * [Containers](reference/containers.md)
-       * [Files](reference/files.md)
        * [Volumes](reference/volumes.md)
+       * [Files](reference/files.md)
    * [CLI](reference/cli.md)
        * [run](reference/run.md)
        * [start](reference/start.md)
@@ -52,4 +52,3 @@
    * [v0.3 (2015-07-29)](release_notes/v0.3.md)
    * [v0.2 (2015-06-26)](release_notes/v0.2.md)
    * [v0.1 (2015-05-25)](release_notes/v0.1.md)
- 

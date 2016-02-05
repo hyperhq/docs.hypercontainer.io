@@ -4,8 +4,8 @@ Podfile is in JSON format. A basic sample looks like the following:
 
     {
         "id": "myweb",
+        "hostname": "myname",
         "tty": true,
-
         "resource": {
             "vcpu": 1,
             "memory": 128
@@ -25,7 +25,7 @@ Podfile is in JSON format. A basic sample looks like the following:
 	        "encoding": "raw",
 	        "uri": "https://s3.amazonaws/bucket/file.conf",
 	        "content": ""
-	    }],
+	      }],
 
         "volumes": []
     }
@@ -33,12 +33,9 @@ Podfile is in JSON format. A basic sample looks like the following:
 ## Sections
 
 - `id`: the identifier (and internal hostname) of the Pod
+- `hostname`: the hostname of the Pod
 - `tty`: turn on/off (`true`/`false`) the tty connection to the Pod, default: `true`
 - `resources`: specify the number of CPU cores and RAM size allocated to the HyperVM instance
 - `containers`: a group of containers to run in the Pod
 - `files`: files to be present in the containers
 - `volumes`: volumes to mount from the host to the containers
-
-
-
-

@@ -1,3 +1,5 @@
+> *Note*: OS X 10.11.x is not supported yet, we are working on new Hyper Mac to support the OS X Hypervisor Framework. The Mac package is not included in the 0.5.0 release of Hyper.
+
 ## Requirements
 
 - Hypervisor
