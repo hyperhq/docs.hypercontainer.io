@@ -30,12 +30,15 @@ If you build Qemu from source, don't forget enable virtfs (`--enable-virtfs`) du
 
 x86_64 binary packages:
 
-> - [hyper-0.4-2.el7.centos.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyper-0.4-2.el7.centos.x86_64.rpm)
-> -  [hyperstart-0.4-2.el7.centos.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.4-2.el7.centos.x86_64.rpm)
+> - [hyper-0.5-1.el7.centos.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyper-0.5-1.el7.centos.x86_64.rpm)
+> -  [hyperstart-0.5-1.el7.centos.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.5-1.el7.centos.x86_64.rpm)
 > - [qemu-hyper-2.4.1-2.el7.centos.x86_64.rpm](https://s3.amazonaws.com/hyper-install/qemu-hyper-2.4.1-2.el7.centos.x86_64.rpm)
 
-soruce RPMs:
+## RPMs for Fedora 23
 
-> - [hyper-0.4-2.el7.centos.src.rpm](https://s3.amazonaws.com/hyper-install/hyper-0.4-2.el7.centos.src.rpm)
-> - [hyperstart-0.4-2.el7.centos.src.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.4-2.el7.centos.src.rpm)
-> - [qemu-hyper-2.4.1-2.el7.centos.src.rpm](https://s3.amazonaws.com/hyper-install/qemu-hyper-2.4.1-2.el7.centos.src.rpm)
+x86_64 binary packages:
+
+> - [hyper-0.5-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyper-0.5-1.fc23.x86_64.rpm)
+> - [yperstart-0.5-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.5-1.fc23.x86_64.rpm)
+
+> *Note*: The qemu shipped in Fedora could work well with Hyper, we did not package qemu for Fedora.
