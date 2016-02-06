@@ -1,5 +1,7 @@
 # Get Started on Mac
 
+> *Note*: OS X 10.11.x is not supported yet, we are working on new Hyper Mac to support the OS X Hypervisor Framework. The Mac package is not included in the 0.5.0 release of Hyper.
+
 This page introduces the daily usage of Hyper for Mac. If you meet any problem not described here, see the [trouble shooting page](../trouble_shooting/darwin.md).
 
 Mac OS X has been introduced in [Hyper v0.3](https://docs.hyper.sh/release_notes/v0.3.html)
