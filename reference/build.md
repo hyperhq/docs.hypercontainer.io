@@ -4,7 +4,7 @@ Build a new image from the source code at PATH
 
 ```
 Usage:
-	hyper build [OPTIONS] PATH
+	hyperctl build [OPTIONS] PATH
 
 Application Options:
 	-t, --tag=""     Repository name (and optionally a tag) to be applied to the resulting image in case of success
@@ -14,5 +14,5 @@ Help Options:
 	-h, --help       Show this help message
 
 Example:
-	hyper build -t test /dockerfile/path/
+	hyperctl build -t test /dockerfile/path/
 ```

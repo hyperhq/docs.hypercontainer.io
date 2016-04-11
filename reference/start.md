@@ -3,7 +3,7 @@
 Launch a `Created` Pod, with a new VM instance
 
 	Usage:
-	  hyper start POD_ID
+	  hyperctl start POD_ID
 
 	Help Options:
 	  -h, --help            Show this help message

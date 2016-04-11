@@ -3,7 +3,7 @@
 Display system-wide information
 
 	Usage:
-	  hyper info
+	  hyperctl info
 
 	Help Options:
 	  -h, --help  Show this help message

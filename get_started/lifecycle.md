@@ -10,25 +10,25 @@ In Hyper, a Pod has two states:
 
 A Pod can be launched either explicitly:
 
-	[root@user ~:]# hyper run -p podfile.json
+	[root@user ~:]# hyperctl run -p podfile.json
 
 Or, implicitly:
 
-	[root@user ~:]# hyper run -t ubuntu
+	[root@user ~:]# hyperctl run -t ubuntu
 
 In both cases, Pods and VMs are indivisible. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`.
 
 However, you can also create a Pod, but without an underlying VM. In such case, the pod stays in `Created` state.
 
-    [root@user ~:]# hyper create -p podfile.json
+    [root@user ~:]# hyperctl create -p podfile.json
 
 There are two options to start the pod:
 
-    [root@user ~:]# hyper start pod_id
+    [root@user ~:]# hyperctl start pod_id
 
 The `START` command will trigger a VM provisioned, and allocate the new VM to the Pod. Alternatively, you can choose to `REPLACE` a running one:
 
-    [root@user ~:]# hyper replace -o old_pod_id -n new_pod_id
+    [root@user ~:]# hyperctl replace -o old_pod_id -n new_pod_id
 
 In this case, the VM instance will be de-associated from `old_pod_id` and re-assign to `new_pod_id`. Since the VM is already present, `REPLACE` is a faster option to launch a pod, than `RUN` and `START`.
 
@@ -36,12 +36,12 @@ In this case, the VM instance will be de-associated from `old_pod_id` and re-ass
 
 When you `STOP` a Pod, the underlying VM instance will be terminated:
 
-    [root@user ~:]# hyper stop pod_id
+    [root@user ~:]# hyperctl stop pod_id
 
 When stopped, the Pod will return to the `Created` state.
 
 To permantly destroy a Pod, you need to `RM` it:
 
-    [root@user ~:]# hyper rm pod_id
+    [root@user ~:]# hyperctl rm pod_id
 
 Hyper will (stop if neccessary, then) remove the Pod definition and its storage.

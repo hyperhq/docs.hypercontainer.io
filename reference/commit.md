@@ -6,7 +6,7 @@ Create a new image from a container's changes
 
 ```
 Usage:
-	hyper commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+	hyperctl commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 
 Application Options:
 	-a, --author=""     Author (e.g., "Hello World <hello@a-team.com>")

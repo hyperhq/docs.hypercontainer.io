@@ -12,7 +12,7 @@ The key idea behind **Pod** is that in a microservice architecture usually invol
 
 In Hyper, a pod consists of a colocated group of AppContainer images, deployed as a single unit in one Hyper instance.
 
-	[root@user ~:]# hyper run -p nginx rails logstash cronjob
+	[root@user ~:]# hyperctl run -p nginx rails logstash cronjob
 
 Inside of the instance, multiple applications from different images share the namespaces: ***`PID`***, ***`Network`***, ***`IPC`***, ***`UTS`***, ***`User`***. Pod helps to provide a familiar view of a tranditional OS to applications, rather than the philosophy of "*one process per container*":
 

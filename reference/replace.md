@@ -5,7 +5,7 @@ Deallocate the VM instance from a `Running` Pod A and re-assign to a `Created` P
 (This command is only avaiable on Linux version)
 
 	Usage:
-	  hyper replace --oldpod POD_ID --newpod POD_ID [--file POD_FILE]
+	  hyperctl replace --oldpod POD_ID --newpod POD_ID [--file POD_FILE]
 
 	Application Options:
 	  -o, --oldpod=""    The Pod that will be replaced, must be in 'running' status

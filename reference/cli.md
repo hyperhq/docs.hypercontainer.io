@@ -3,7 +3,7 @@
 ```
 Usage:
 
-	hyper [OPTIONS] COMMAND [ARGS...]
+	hyperctl [OPTIONS] COMMAND [ARGS...]
 
 Command:
 
@@ -30,5 +30,5 @@ Help Options:
 
     -h, --help             Show this help message
 
-Run 'hyper COMMAND --help' for more information on a command.
+Run 'hyperctl COMMAND --help' for more information on a command.
 ```
