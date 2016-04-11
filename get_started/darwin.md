@@ -4,7 +4,7 @@
 
 This page introduces the daily usage of Hyper for Mac. If you meet any problem not described here, see the [trouble shooting page](../trouble_shooting/darwin.md).
 
-Mac OS X has been introduced in [Hyper v0.3](https://docs.hyper.sh/release_notes/v0.3.html)
+Mac OS X has been introduced in [Hyper v0.3](http://docs.hypercontainer.io/release_notes/v0.3.html)
 
 ## Install
 

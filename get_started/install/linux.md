@@ -18,7 +18,7 @@
 To setup Hyper, simply run (after 0.4, the same package support both
   KVM and Xen)
 
-    curl -sSL https://hyper.sh/install | bash
+    curl -sSL http://hypercontainer.io/install | bash
 
 Don't like the "curl to bash" methods? Download [tarball here](http://hyper-install.s3.amazonaws.com/hyper-latest.tgz).
 
