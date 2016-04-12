@@ -3,7 +3,7 @@
 Launch one or multiple Docker images as a Pod, with a new VM instance
 
     Usage:
-      hyper run [OPTIONS] IMAGE [COMMAND] [ARG...]
+      hyperctl run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
     Create a pod, and launch a new VM to run the pod
 
@@ -30,10 +30,10 @@ Launch one or multiple Docker images as a Pod, with a new VM instance
       -h, --help             Show this help message
 
 	Example:
-	  hyper run -t ubuntu
-	  hyper run -t ubuntu:latest
-	  hyper run -t ubuntu /bin/bash
-	  hyper run -d nginx
-	  hyper run -p mypod.json
+	  hyperctl run -t ubuntu
+	  hyperctl run -t ubuntu:latest
+	  hyperctl run -t ubuntu /bin/bash
+	  hyperctl run -d nginx
+	  hyperctl run -p mypod.json
 
 

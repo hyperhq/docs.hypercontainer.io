@@ -20,7 +20,7 @@ And make sure you have `go` (>= 1.4) and `autotools`, develop files of
 
 (If you want to build without Xen support, use configure option `--without-xen`.)
 
-Then you can get the binaries `hyperd` daemon and `hyper` CLI tool.
+Then you can get the binaries `hyperd` daemon and `hyperctl` CLI tool.
 
 #### Build Xen from source
 

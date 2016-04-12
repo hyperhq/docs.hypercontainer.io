@@ -14,7 +14,7 @@ To install Hyper on Mac OS X, you need first to install VirtualBox 5.0, then dow
 The Hyper Mac package contains
 
 - `hyperd` Daemon, which could be controled with `launchctl`
-- `hyper` cli tool with
+- `hyperctl` command line control tool with
 - An uninstall shell script, located under `/opt/hyper/bin/uninstall-hyper.sh`
 
 > If you need to uninstall hyper and clean all existing images and containers, call the uninstall script with `--purge` flag.

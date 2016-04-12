@@ -5,7 +5,7 @@ specified "https://index.docker.io/v1/" is the default.
 
 ```
 Usage:
-  hyper login [SERVER]
+  hyperctl login [SERVER]
 
 Application Options:
   -e, --email=""       Email

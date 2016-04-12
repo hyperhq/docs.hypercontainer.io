@@ -2,7 +2,7 @@
 
 - `name`: the identifier of a container; a random id will be given if absent
 
-- `image`: in the form `[registry]/image[:tag]`; hyper will automatically pull the image if missing
+- `image`: in the form `[registry]/image[:tag]`; hyperctl will automatically pull the image if missing
 
 - `command`: the shell command to run when the container starts
 

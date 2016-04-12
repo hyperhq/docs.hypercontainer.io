@@ -4,7 +4,7 @@ Log out from a Docker registry, if no server is specified "https://index.docker.
 
 ```
 Usage:
-	hyper logout [SERVER]
+	hyperctl logout [SERVER]
 
 Help Options:
 	-h, --help  Show this help message

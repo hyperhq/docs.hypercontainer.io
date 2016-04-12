@@ -4,7 +4,7 @@ List images
 
 ```
 Usage:
-	hyper images [OPTIONS] [REPOSITORY]
+	hyperctl images [OPTIONS] [REPOSITORY]
 
 Application Options:
 	-a, --all            Show all images (by default filter out the intermediate image layers) (false)
