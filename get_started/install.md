@@ -1,7 +1,7 @@
 # Install
 
 
-## [Linux version](./install/linux.html)
-## [Mac version](./install/mac.html)
-## [Build from source](./install/build.html)
+## [Linux version](./install/linux.md)
+## [Mac version](./install/mac.md)
+## [Build from source](./install/build.md)
 
