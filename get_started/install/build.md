@@ -11,7 +11,7 @@ Clone hyper in GoPath
     > git clone https://github.com/hyperhq/runv.git runv
 
 And make sure you have `go` (>= 1.4) and `autotools`, develop files of
-`libdevmapper`, `libsqlite3`, then
+`libdevmapper`, `libsqlite3`, `libvirt-devel` then
 
     > cd hyper
     > ./autogen.sh
