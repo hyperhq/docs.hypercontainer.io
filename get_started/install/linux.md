@@ -44,7 +44,12 @@ and SRPMS:
 
 x86_64 binary packages:
 
-> - [hyper-0.5-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyper-0.5-1.fc23.x86_64.rpm)
-> - [hyperstart-0.5-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.5-1.fc23.x86_64.rpm)
+> - [hyper-container-0.6-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyper-container-0.6-1.fc23.x86_64.rpm)
+> - [hyperstart-0.6-1.fc23.x86_64.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.6-1.fc23.x86_64.rpm)
+
+and SRPMS:
+
+> - [hyper-container-0.6-1.fc23.src.rpm](https://s3.amazonaws.com/hyper-install/hyper-container-0.6-1.fc23.src.rpm)
+> - [hyperstart-0.6-1.fc23.src.rpm](https://s3.amazonaws.com/hyper-install/hyperstart-0.6-1.fc23.src.rpm)
 
 > *Note*: The qemu shipped in Fedora could work well with Hyper, we did not package qemu for Fedora.
