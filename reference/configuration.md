@@ -28,7 +28,6 @@ The configuration file of Hyper is located under `/etc/hyper.conf`. The file is 
 	  ./hyperd [OPTIONS]
 
 	Application Options:
-    --nondaemon           run as a normal program
 	  -config=""            configuration for ./hyperd
 	  —v=0                  log level for V logs
 	  —log_dir              log directory

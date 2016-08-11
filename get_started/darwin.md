@@ -58,7 +58,6 @@ And use the following command to check the daemon status.
 			"/opt/hyper/bin/hyperd";
 			"--config=/opt/hyper/etc/hyper/config";
 			"-v=1";
-			"--nondaemon";
 		);
 	};
 
