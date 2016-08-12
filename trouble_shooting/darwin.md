@@ -23,7 +23,6 @@ For Mac users, the log is located under `/var/log/hyper/`. If you meet any unkno
 				<string>/opt/hyper/bin/hyperd</string>
 				<string>--config=/opt/hyper/etc/hyper/config</string>
 				<string>-v=1</string>
-				<string>--nondaemon</string>
 		  </array>
 		  <key>EnvironmentVariables</key>
 		  <dict>
