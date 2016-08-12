@@ -2,7 +2,7 @@
 
 ## Configuration file
 
-The configuration file of Hyper is located under `/etc/hyper.conf`. The file is in INI format：
+The configuration file of Hyper is located under `/etc/hyper/config`. The file is in INI format：
 
     Host   = tcp://localhost:1246
     Bios   = /var/lib/hyper/bios.bin
