@@ -6,7 +6,7 @@
 
 ## Install
 
-[the current version](../release_notes/latest.md) supports the following Linux distros:
+[the current version](../../release_notes/latest.md) supports the following Linux distros:
 
 - Ubuntu ( > 14.04 )
 - CentOS/RHEL 7.x
