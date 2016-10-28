@@ -7,10 +7,10 @@ Clone hyper in GoPath
     > cd ${GOPATH}/src
     > mkdir -p github.com/hyperhq
     > cd github.com/hyperhq
-    > git clone https://github.com/hyperhq/hyper.git hyper
+    > git clone https://github.com/hyperhq/hyperd.git hyper
     > git clone https://github.com/hyperhq/runv.git runv
 
-And make sure you have `go` (>= 1.4) and `autotools`, develop files of
+And make sure you have `go` (>= 1.5) and `autotools`, develop files of
 `libdevmapper`, `libsqlite3`, `libvirt-devel` then
 
     > cd hyper
@@ -44,7 +44,6 @@ Then you can find `hyper-initrd.img` in build directory, together with a pre-bui
 
 #### Build Your Own Kernel
 
-You can reference the [Hyper kernel configuration](https://github.com/hyperhq/hyperstart/blob/master/build/kernel_config),
-and for Qemu/KVM driver, you'd better build new CBFS ROMs with `make cbfs`, which will add the kernel in `build/` and initramfs into a CBFS ROM.
+You can reference the [Hyper kernel configuration](https://github.com/hyperhq/hyperstart/blob/master/build/kernel_config).
 
 You can find related configuration items in [the config file](../reference/configuration.html).
