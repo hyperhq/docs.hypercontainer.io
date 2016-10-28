@@ -26,7 +26,7 @@
     -  `filename`: the filename defined in [files](./files.md) section
     -  `perm`: the file permission, by default `0755`
 
-- `restartPolicy`: restart the container if exit: `never`, `onFailure`, or `always`
+- `tty`: whether the stdio of the container is a tty device
 
 example:
 
@@ -53,5 +53,5 @@ example:
             "containerPort": 80,
             "hostPort": 8000,
         }],
-        "restartPolicy": "never"
+        "tty": true
     }]
