@@ -26,13 +26,7 @@ There are two options to start the pod:
 
     [root@user ~:]# hyperctl start pod_id
 
-The `START` command will trigger a VM provisioned, and allocate the new VM to the Pod. Alternatively, you can choose to `REPLACE` a running one:
-
-    [root@user ~:]# hyperctl replace -o old_pod_id -n new_pod_id
-
-In this case, the VM instance will be de-associated from `old_pod_id` and re-assign to `new_pod_id`. Since the VM is already present, `REPLACE` is a faster option to launch a pod, than `RUN` and `START`.
-
-> Note: `old_pod_id` must be running.
+The `START` command will trigger a VM provisioned, and allocate the new VM to the Pod.
 
 When you `STOP` a Pod, the underlying VM instance will be terminated:
 
