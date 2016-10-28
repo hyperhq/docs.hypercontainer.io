@@ -24,7 +24,7 @@
        * [attach](reference/attach.md)
        * [exec](reference/exec.md)
        * [create](reference/create.md)
-       * [replace](reference/replace.md)
+       * [kill](reference/kill.md)
        * [rm](reference/rm.md)
        * [info](reference/info.md)
        * [list](reference/list.md)
