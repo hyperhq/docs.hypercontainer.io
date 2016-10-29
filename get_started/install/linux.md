@@ -58,5 +58,5 @@ and SRPMS:
 
 Binary packages for `amd64`:
 
-> - [hypercontainer_0.7.0-1_amd64.deb](https://s3-us-west-1.amazonaws.com/hypercontainer-install/hypercontainer_0.7.0-1_amd64.deb)
+> - [hypercontainer_0.7.0-2_amd64.deb](https://s3-us-west-1.amazonaws.com/hypercontainer-install/hypercontainer_0.7.0-2_amd64.deb)
 > - [hyperstart_0.7.0-1_amd64.deb](https://s3-us-west-1.amazonaws.com/hypercontainer-install/hyperstart_0.7.0-1_amd64.deb)
