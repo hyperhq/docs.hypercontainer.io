@@ -53,3 +53,10 @@ and SRPMS:
 > - [hyperstart-0.7.0-1.fc23.src.rpm](https://hypercontainer-install.s3.amazonaws.com/hyperstart-0.7.0-1.fc23.src.rpm)
 
 > *Note*: The qemu shipped in Fedora could work well with Hyper, we did not package qemu for Fedora.
+
+## Deb packages for Ubuntu
+
+Binary packages for `amd64`:
+
+> - [hypercontainer_0.7.0-2_amd64.deb](https://s3-us-west-1.amazonaws.com/hypercontainer-install/hypercontainer_0.7.0-2_amd64.deb)
+> - [hyperstart_0.7.0-1_amd64.deb](https://s3-us-west-1.amazonaws.com/hypercontainer-install/hyperstart_0.7.0-1_amd64.deb)
