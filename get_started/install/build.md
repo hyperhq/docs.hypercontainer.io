@@ -46,4 +46,4 @@ Then you can find `hyper-initrd.img` in build directory, together with a pre-bui
 
 You can reference the [Hyper kernel configuration](https://github.com/hyperhq/hyperstart/blob/master/build/kernel_config).
 
-You can find related configuration items in [the config file](../reference/configuration.html).
+You can find related configuration items in [the config file](../../reference/configuration.html).
