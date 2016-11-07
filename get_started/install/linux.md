@@ -20,7 +20,7 @@ To setup Hyper, simply run (after 0.4, the same package support both
 
     curl -sSL https://hypercontainer.io/install | bash
 
-Don't like the "curl to bash" methods? Download [tarball here](http://hyper-install.s3.amazonaws.com/hyper-latest.tgz).
+Don't like the "curl to bash" methods? Download [tarball here](https://hypercontainer-install.s3.amazonaws.com/hyper-latest.tgz).
 
 For CentOS/RHEL users, please use the pre-build RPMs
 
