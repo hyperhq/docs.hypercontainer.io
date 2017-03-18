@@ -45,6 +45,7 @@
    * [Xen FAQ](trouble_shooting/xen.md)
 * [Release Notes](release_notes/README.md)
    * [latest](release_notes/latest.md)
+   * [v0.8 (2017-03-20)](release_notes/v0.8.md)
    * [v0.7 (2016-10-28)](release_notes/v0.7.md)
    * [v0.6 (2016-05-25)](release_notes/v0.6.md)
    * [v0.5 (2016-02-05)](release_notes/v0.5.md)
