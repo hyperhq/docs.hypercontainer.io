@@ -3,6 +3,7 @@
 In version 0.8, Hyperd and RunV was refactored, and introduced several significant updates, such as support the Kubernetes Container Runtime Interface (CRI) semantics, and support OCI images spec. Here are some highlight features of the release.
 
 - Refactor: Move all the Pod level logic to hyperd, and runV only maintains the sandbox and containers.
+- Refactor: Simplified the model and state machine -- one Pod is one VM.
 - Refactor: Allow add/remove containers to/from a Pod/sandbox.
 - Refactor: Don't stop Sandbox without an explicit stop command even if the last container is stopped. This is compatible to the k8s CRI semantics.
 - Feature: Support OCI Image Spec.
