@@ -23,7 +23,7 @@ Similar with Docker, Hyper allows you to mount additional volumes to a HyperVM i
     	"volumes": [{                               # Definition
                 "name": "prod_log",
                 "source": "/var/log/myweb.img",
-                "driver": "qcow2"
+                "format": "raw"
     	}],
     }
 
@@ -32,7 +32,7 @@ The `volumes` section is a list of items with the following properties:
 
 - `name`: identifier of the volume
 - `source`: the volume path on the host, either directory or file. If absent, a new 10GB volume will be created
-- `driver`: the volume format
+- `format`: the volume format
   - block-device-image file: `raw`, `qcow2`, this allows to mount a VM image to HyperVM. Note: the image file must have a `EXT4` fs in it.
   - plain file or dir: `vfs`, this options is to mount a file/dir on the host to to HyperVM instance
   - empty: leave empty

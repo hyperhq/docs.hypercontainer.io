@@ -110,7 +110,7 @@ Create a container
 
 `POST /pod/create`
 
-The body is a container spec in JSON format.
+The body is a [container spec in JSON format](./containers.md).
 
 ##### Start container
 

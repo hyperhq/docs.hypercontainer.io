@@ -1,4 +1,4 @@
-# Podfile
+# Pod Spec
 
 Podfile is in JSON format. A basic sample looks like the following:
 
@@ -34,6 +34,6 @@ Podfile is in JSON format. A basic sample looks like the following:
 - `id`: the identifier (and internal hostname) of the Pod
 - `hostname`: the hostname of the Pod
 - `resources`: specify the number of CPU cores and RAM size allocated to the HyperVM instance
-- `containers`: a group of containers to run in the Pod
-- `files`: files to be present in the containers
-- `volumes`: volumes to mount from the host to the containers
+- `containers`: a group of [containers](./containers.md) to run in the Pod. Since 0.8, we could create a Pod with empty containers list, and add containers later.
+- `files`: [files](./files.md) to be present in the containers
+- `volumes`: [volumes](./volumes.md) to mount from the host to the containers
