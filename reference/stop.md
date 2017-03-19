@@ -1,9 +1,16 @@
 # stop
 
-Stop a `Running` Pod, which will return to `Created` state
+Stop a running pod or container
 
-	Usage:
-	  hyperctl stop POD_ID
+```
+Usage:
+  hyperctl stop [OPTIONS] CONTAINER_ID|POD_ID
 
-	Help Options:
-	  -h, --help             Show this help message
+Stop running container or pod
+
+Application Options:
+  -c, --container  stop container
+
+Help Options:
+  -h, --help       Show this help message
+```
