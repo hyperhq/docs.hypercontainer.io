@@ -10,7 +10,7 @@ Clone hyper in GoPath
     > git clone https://github.com/hyperhq/hyperd.git hyper
     > git clone https://github.com/hyperhq/runv.git runv
 
-And make sure you have `go` (>= 1.5) and `autotools`, develop files of
+And make sure you have `go` (>= 1.5, 1.7 or later is recommended) and `autotools`, develop files of
 `libdevmapper`, `libsqlite3`, `libvirt-devel` then
 
     > cd hyper
@@ -41,6 +41,14 @@ And build with autotools
     > make
 
 Then you can find `hyper-initrd.img` in build directory, together with a pre-build `kernel`. You can also find the `kernel_config` in the repo.
+
+#### Build Qemu
+
+Hyperd could work with vanilla qemu 2.0 or newer, however, we provided our branch with some patches from hyper:
+
+```
+https://github.com/hyperhq/qemu/tree/2.4.1-template
+```
 
 #### Build Your Own Kernel
 
