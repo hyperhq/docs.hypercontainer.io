@@ -31,6 +31,8 @@
        * [commit](reference/commit.md)
        * [build](reference/build.md)
        * [push](reference/push.md)
+       * [save](reference/save.md)
+       * [load](reference/load.md)
        * [login](reference/login.md)
        * [logout](reference/logout.md)
    * [API](reference/api.md)
