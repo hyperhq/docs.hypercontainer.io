@@ -50,6 +50,8 @@ Hyperd could work with vanilla qemu 2.0 or newer, however, we provided our branc
 https://github.com/hyperhq/qemu/tree/2.4.1-template
 ```
 
+If you build Qemu from source, don't forget enable virtfs (`--enable-virtfs`) during configuration.
+
 #### Build Your Own Kernel
 
 You can reference the [Hyper kernel configuration](https://github.com/hyperhq/hyperstart/blob/master/build/kernel_config).
