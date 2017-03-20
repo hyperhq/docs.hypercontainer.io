@@ -7,7 +7,7 @@ This is the REST API reference of `hyperd` based on [The latest release](../rele
 * [The current release](../release_notes/latest.md) does not support encrypted connections.
 * The Remote API uses an open schema model. In this model, unknown properties in incoming messages will be ignored. Client applications need to take this in consideration to ensure they will not break when talking to newer hyperd daemons.
 * Calling `/info` is the same as calling `/${latest}/info`
-* The API tends to be RESTful, but for some complex commands, like attach or pull, the HTTP connection is hijacked to transport stdout, stdin and stderr
+* The API tends to be RESTful, but in a few exceptions, e.g. `attach`, `pull`, the HTTP connection is hijacked to transport stdout, stdin and stderr.
 
 ### 2. Endpoints
 #### 2.1 Pod
