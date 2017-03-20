@@ -3,7 +3,7 @@
 In this release, several significant updates are introduced, such as **Kubernetes Container Runtime Interface (CRI)** support, **OCI images spec** support:
 
 - Feature: Kubernetes CRI support.
-- Feature: OCI Image Spec support .
+- Feature: OCI Image Spec support (`hyperctl save -o nginx.tar -f oci `).
 - Interfaces: better GRPC API support.
 - Arch: support ARM64 CPUs with GIC version3, e.g. Cavium ThunderX 64-core CPU.
 - Enhancement: move all the Pod level logic to hyperd, and runV only maintains the sandbox and containers.
