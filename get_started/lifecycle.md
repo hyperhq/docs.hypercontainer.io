@@ -2,9 +2,9 @@
 
 ![](../figures/lifecycle.png)
 
-> Since v0.8, HyperContainer simplified the model (and the state machine), we won't maintain Pod and VM lifecycle independently any more.
+In HyperContainer, a Pod is encapsulated in a VM. Since v0.8, HyperContainer simplified the model of Pod and underlying VM (as well as the state machine). The lifecycle of Pod and VM are no longer managed separately.
 
-In HyperContainer, a Pod is encapsulated in a VM. A Pod can be launched either explicitly:
+A Pod can be launched either explicitly:
 
 	➜ sudo ./hyperctl run -p podfile.json
 
@@ -13,7 +13,7 @@ Or, implicitly:
 	➜ sudo ./hyperctl run -d nginx
 	POD id is nginx-8530075287
 
-In both cases, Pods and VMs are indivisible. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`. There may be zero, one, or more containers in a Pod. And you may create, start, stop, and remove containers in/from a Pod.
+In both cases, Pods and VMs are indivisible. Hyper will automatically create a new VM instance to host the Pod, and the Pod will be `Running`. There could be zero, one, or more containers in a Pod. And you can create, start, stop, and remove containers in/from a Pod.
 
 	➜ sudo ./hyperctl create -c -d nginx-8530075287 busybox
 	Container ID is a8fd34f686e6587979936df880b9e9144fefd895d19560493d2028aa82c47f0c
