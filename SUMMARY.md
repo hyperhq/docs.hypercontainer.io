@@ -12,6 +12,7 @@
        * [Build from source](get_started/install/build.md)
    * [Pod](get_started/pod.md)
    * [Lifecycle](get_started/lifecycle.md)
+   * [OCI Image Spec](get_started/oci_image.md)
 * [Reference](reference/README.md)
    * [Hyperd Config](reference/configuration.md)
    * [CLI](reference/cli.md)
