@@ -9,7 +9,8 @@ Usage:
 list all pods or container information
 
 Application Options:
-  -p, --pod=""    only list the specified pod
+  -p, --pod=""    Only list the specified pod
+  -q, --quiet     Quiet mode
 
 Help Options:
   -h, --help      Show this help message
