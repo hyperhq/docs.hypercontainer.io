@@ -1,10 +1,17 @@
 # rm
 
-Remove a Pod permantly, cleanup its disk storage.
+Remove one or more pods or containers
 
+```
+Usage:
+  hyperctl rm [OPTIONS] CONTAINER|POD [CONTAINER|POD...]
 
-	Usage:
-	  hyperctl rm POD_ID [POD_ID...]
+Remove one or more containers/pods
 
-	Help Options:
-	  -h, --help  Show this help message
+Application Options:
+  -c, --container  stop container
+
+Help Options:
+  -h, --help       Show this help message
+
+```

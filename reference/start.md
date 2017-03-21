@@ -1,9 +1,16 @@
 # start
 
-Launch a `Created` Pod, with a new VM instance
+Start a pod or container
 
-	Usage:
-	  hyperctl start POD_ID
+```
+Usage:
+  hyperctl start [OPTIONS] POD_ID|CONTAINER_ID
 
-	Help Options:
-	  -h, --help            Show this help message
+Launch a created pod or container
+
+Application Options:
+  -c, --container  start container
+
+Help Options:
+  -h, --help       Show this help message
+```

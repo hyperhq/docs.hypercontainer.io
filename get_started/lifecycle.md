@@ -1,41 +1,47 @@
 # Lifecycle
 
-![](https://trello-attachments.s3.amazonaws.com/5562ba47387906ddef327e00/704x249/e4b1ec0168197c13e838bd5b405b3f28/pod.png)
+![](../figures/lifecycle.png)
 
-In Hyper, a Pod has two states:
-
-- `Created`: a Pod is defined, its storage has been allocated, and the Docker images have been downloaded
-- `Running`: a Pod (with its containers) is launched in a VM instance
-
+In HyperContainer, a Pod is encapsulated in a VM. Since v0.8, HyperContainer simplified the model of Pod and underlying VM (as well as the state machine). The lifecycle of Pod and VM are no longer managed separately.
 
 A Pod can be launched either explicitly:
 
-	[root@user ~:]# hyperctl run -p podfile.json
+	➜ sudo ./hyperctl run -p podfile.json
 
 Or, implicitly:
 
-	[root@user ~:]# hyperctl run -t ubuntu
+	➜ sudo ./hyperctl run -d nginx
+	POD id is nginx-8530075287
 
-In both cases, Pods and VMs are indivisible. Hyper will automatically provision a new VM instance to host the Pod, and the Pod will be `Running`.
+In both cases, Pods and VMs are indivisible. Hyper will automatically create a new VM instance to host the Pod, and the Pod will be `Running`. There could be zero, one, or more containers in a Pod. And you can create, start, stop, and remove containers in/from a Pod.
 
-However, you can also create a Pod, but without an underlying VM. In such case, the pod stays in `Created` state.
+	➜ sudo ./hyperctl create -c -d nginx-8530075287 busybox
+	Container ID is a8fd34f686e6587979936df880b9e9144fefd895d19560493d2028aa82c47f0c
+	➜ sudo ./hyperctl list container
+	Container ID                                                       Name                 POD ID              Status
+	6e8c08420389a165682586380fa35432f5922287b9aec34059ed1ff68b3f1623   nginx-8530075287     nginx-8530075287    running
+	a8fd34f686e6587979936df880b9e9144fefd895d19560493d2028aa82c47f0c   busybox-2602968228   nginx-8530075287    pending
+	➜ sudo ./hyperctl start -c busybox-2602968228
+	Successfully started container busybox-2602968228
+	➜ sudo ./hyperctl list container
+	Container ID                                                       Name                 POD ID              Status
+	a8fd34f686e6587979936df880b9e9144fefd895d19560493d2028aa82c47f0c   busybox-2602968228   nginx-8530075287    running
+	6e8c08420389a165682586380fa35432f5922287b9aec34059ed1ff68b3f1623   nginx-8530075287     nginx-8530075287    running
+	➜ sudo ./hyperctl stop -c busybox-2602968228 nginx-8530075287
+	➜ sudo ./hyperctl list container
+	Container ID                                                       Name                 POD ID              Status
+	6e8c08420389a165682586380fa35432f5922287b9aec34059ed1ff68b3f1623   nginx-8530075287     nginx-8530075287    succeeded
+	a8fd34f686e6587979936df880b9e9144fefd895d19560493d2028aa82c47f0c   busybox-2602968228   nginx-8530075287    succeeded
+	➜ sudo ./hyperctl rm -c busybox-2602968228 nginx-8530075287
+	container busybox-2602968228 is successfully deleted!
+	container nginx-8530075287 is successfully deleted!
+	➜ sudo ./hyperctl list container
+	Container ID        Name                POD ID              Status
+	➜ sudo ./hyperctl list
+	POD ID              POD Name            VM name             Status
+	nginx-8530075287    nginx-8530075287    vm-pqEnBvQVdS       running
 
-    [root@user ~:]# hyperctl create -p podfile.json
+And you could stop or remove the Pod.
 
-There are two options to start the pod:
-
-    [root@user ~:]# hyperctl start pod_id
-
-The `START` command will trigger a VM provisioned, and allocate the new VM to the Pod.
-
-When you `STOP` a Pod, the underlying VM instance will be terminated:
-
-    [root@user ~:]# hyperctl stop pod_id
-
-When stopped, the Pod will return to the `Created` state.
-
-To permantly destroy a Pod, you need to `RM` it:
-
-    [root@user ~:]# hyperctl rm pod_id
-
-Hyper will (stop if neccessary, then) remove the Pod definition and its storage.
+	➜ sudo ./hyperctl rm nginx-8530075287
+	Pod(nginx-8530075287) is successfully deleted!

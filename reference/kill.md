@@ -3,7 +3,7 @@
 Send kill signal to container or Pod
 
 	Usage:
-      hyperctl kill [OPTIONS] CONTAINER_ID|POD_ID
+      hyperctl kill [OPTIONS] CONTAINER_ID|POD_ID...
 
 	Help Options:
 	  -h, --help         Show this help message

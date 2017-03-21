@@ -1,14 +1,13 @@
-# API
+# RESTful API
 
-This is the API reference of `hyperd` based on [The latest release](../release_notes/latest.md).
-
+This is the REST API reference of `hyperd` based on [The latest release](../release_notes/latest.md).
 
 ### 1. Introduction
 * By default `hyperd` listens on unix:///var/run/hyper.sock and the client must have root access to interact with the daemon.
 * [The current release](../release_notes/latest.md) does not support encrypted connections.
 * The Remote API uses an open schema model. In this model, unknown properties in incoming messages will be ignored. Client applications need to take this in consideration to ensure they will not break when talking to newer hyperd daemons.
 * Calling `/info` is the same as calling `/${latest}/info`
-* The API tends to be RESTfull, but for some complex commands, like attach or pull, the HTTP connection is hijacked to transport stdout, stdin and stderr
+* The API tends to be RESTful, but in a few exceptions, e.g. `attach`, `pull`, the HTTP connection is hijacked to transport stdout, stdin and stderr.
 
 ### 2. Endpoints
 #### 2.1 Pod
@@ -43,7 +42,7 @@ Stop a Pod
 
 The `stopVM` property can be `yes` or `no`; it will destroy the VM associated with the Pod if its value is `yes`
 
-##### Destroy Pod
+##### Delete Pod
 `DELETE /pod`
 
 Destroy a Pod
@@ -51,7 +50,6 @@ Destroy a Pod
 **Example request:**
 
 `DELETE /pod?podId=pod-xxxxxxxxxx`
-
 
 ##### List Pods
 `GET /list`
@@ -62,7 +60,108 @@ List pods
 
 `GET /list?item=pod`
 
+##### GET Pod info
+
+`GET /pod/info`
+
+Get Pod detail information
+
+**Example request:**
+
+`GET /pod/info?podId=pod-xxxxxxxxxx`
+
+##### Get Pod Stats
+
+`GET /pod/stats`
+
+Get Pod stats info
+
+**Example request:**
+
+`GET /pod/stats?podId=pod-xxxxxxxxxx`
+
+##### Set Pod label
+
+`POST /pod/labels`
+
+Set pod labels
+
+**Example request:**
+
+`POST /pod/labels?podId=pod-xxxxxxxxxx&labels={"ll":"vv"}&override=true`
+
+##### Send Signal to Pod
+
+`POST /pod/kill`
+
+Send kill signal to containers of a Pod
+
+**Example request:**
+
+`POST /pod/kill?podName=pod-xxxxxxxxxx&container=xxxxxxx&signal=9`
+
 #### 2.2 Container
+##### Create container
+`POST /container/create`
+
+Create a container
+
+**Example request:**
+
+`POST /pod/create`
+
+The body is a [container spec in JSON format](./containers.md).
+
+##### Start container
+
+`POST /container/start`
+
+Start a container
+
+**Example request:**
+
+`POST /container/start?container=xxxxxxxx`
+
+##### Stop container
+
+`POST /container/stop`
+
+Stop a container
+
+**Example request:**
+
+`POST /container/stop?container=xxxxxxxx`
+
+##### Kill container
+
+`POST /container/kill`
+
+Kill a container with a signal
+
+**Example request:**
+
+`POST /container/kill?container=xxxxxxxx&signal=9`
+
+##### Delete container
+
+`POST /container/remove`
+
+Remove a container from Pod
+
+**Example request:**
+
+`POST /container/remove?container=xxxxxxxx`
+
+##### Rename container
+
+`POST /container/rename`
+
+Rename a container
+
+**Example request:**
+
+`POST /container/rename?newName=yyyyyyy&oleName=xxxxxxxx`
+
 ##### List containers
 `GET /list`
 
@@ -71,6 +170,34 @@ List containers
 **Example request:**
 
 `GET /list?item=container`
+
+##### Get container info
+
+`GET /container/info`
+
+Get container info
+
+**Example request:**
+
+`GET /container/info?container=xxxxxxxx`
+
+##### Get container logs
+
+`GET /container/logs`
+
+Get container logs
+
+**Example request:**
+
+`GET /container/logs?container=xxxxxxxx&stdout=true&stderr=true&follow=false&timestamp=true&tail=100`
+
+##### Get container or exec exit code
+
+`GET /container/exitcode`
+
+**Example request:**
+
+`GET /container/exitcode?container=xxxxxxxx&exec=eeeeeeeee`
 
 ##### Create a new image from a container’s changes
 `POST /container/commit`
@@ -111,7 +238,47 @@ List containers
     }
 ```
 
-#### 2.3 Info
+#### 2.3 Attach and Exec
+
+##### Attach to container
+
+`POST /attach`
+
+Attach to a container, will upgrade to TCP stream.
+
+##### TTY resize
+
+`POST /tty/resize`
+
+Change the tty window size of container or exec
+
+**Example request:**
+
+`POST /tty/resize?container=xxxxxxxx&exec=eeeeeeeee&h=25&w=80`
+
+##### Create exec
+
+`POST /exec/create`
+
+Create an exec
+
+**Example request:**
+
+`POST /exec/create?container=xxxxxxxx&tty=true&command=/bin/bash`
+
+##### Start exec
+
+`POST /exec/start`
+
+Start an exec
+
+**Example request:**
+
+`POST /exec/start?container=xxxxxxxx&exec=eeeeeeeee`
+
+The exec request will upgrade to TCP stream
+
+#### 2.4 Info
 ##### System-wide info
 `GET /info`
 
@@ -120,34 +287,6 @@ Display system-wide information
 **Example request:**
 
 `GET /info`
-
-#### 2.4 VM
-##### Create VM
-`POST /vm/create`
-
-Create a VM
-
-**Example request:**
-
-`POST /vm/create`
-
-##### Kill VM
-`DELETE /vm`
-
-Kill a VM
-
-**Example request:**
-
-`DELETE /vm?vm=vm-xxxxxxxxxx`
-
-##### List VMs
-`GET /list`
-
-List all VMs
-
-**Example request:**
-
-`GET /list?item=vm`
 
 #### 2.5 Images
 ##### List Images

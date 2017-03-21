@@ -1,4 +1,4 @@
-# Containers
+# Container Spec
 
 - `name`: the identifier of a container; a random id will be given if absent
 
@@ -16,15 +16,17 @@
     - `hostPort`: the port exposed in host machine
     - `protocol`: `tcp` (default) or `udp`
 
-- `volumes`: volumes to be mounted in the container.
+- `volumes`: volumes reference to be mounted in the container.
     -  `path`: the mount point
-    -  `volume`: the name of the volume to be mounted, defined in [volumes](./volumes.md) section
+    -  `volume`: the name of the volume to be mounted, defined in [volumes](./volumes.md) section, or specified in `detail`.
     -  `readOnly`: if `true`, the mount point will be read only, default `false`
+    -  `detail`: the [volume spec](./volumes.md). If the volume is defined in `volumes` section of the pod, the `detail` field could leave null.
 
-- `files`: files to be present in the container
+- `files`: files reference to be present in the container
     -  `path`: the file path in the container
-    -  `filename`: the filename defined in [files](./files.md) section
+    -  `filename`: the filename defined in [files](./files.md) section, or specified in `detail`.
     -  `perm`: the file permission, by default `0755`
+    -  `detail`: the [file spec](./files.md). If the file is defined in `files` section of the pod, the `detail` field could leave null.
 
 - `tty`: whether the stdio of the container is a tty device
 
@@ -42,12 +44,23 @@ example:
         "volumes": [{
             "path": "/var/log",
             "volume": "name",
-            "readOnly": false
+            "readOnly": false,
+            "detail": {                             
+                      "name": "prod_log",
+                      "source": "/var/log/myweb.img",
+                      "format": "raw"
+          	}
         }],
         "files":  [{
             "path": "/var/lib/xxx/xxxx",
             "filename": "name",
-            "perm": "0755"
+            "perm": "0755",
+            "detail": {
+    	        "name": "nginx.conf",
+    	        "encoding": "raw",
+    	        "uri": "https://s3.amazonaws/bucket/file.conf",
+    	        "content": ""
+    	    }
         }],
         "ports":[{
             "containerPort": 80,

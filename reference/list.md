@@ -1,11 +1,17 @@
 # list
 
-Display the Pod, VM or container information
+Display the Pod or container information
 
-	Usage:
-	  hyperctl list [OPTIONS] [pod|vm|container]
+```
+Usage:
+  hyperctl list [OPTIONS] [pod|container]
 
-	Help Options:
-	  -h, --help       Show this help message
-		-p, --pod podId  Only list the contents from specified Pod
-		-v, --vm  vmId   Only list the contents from specified VM
+list all pods or container information
+
+Application Options:
+  -p, --pod=""    Only list the specified pod
+  -q, --quiet     Quiet mode
+
+Help Options:
+  -h, --help      Show this help message
+```

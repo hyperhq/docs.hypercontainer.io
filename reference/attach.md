@@ -1,9 +1,13 @@
 # attach
 
-Attach a specified container in a Pod to TTY
+Attach to the input/output of a specified container
 
-	Usage:
-	  hyperctl attach CONTAINER
+```
+Usage:
+  hyperctl attach CONTAINER
 
-	Help Options:
-	  -h, --help  Show this help message
+Attach to the input/output of a specified container
+
+Help Options:
+  -h, --help  Show this help message
+```

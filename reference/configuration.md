@@ -1,24 +1,67 @@
-# Configuration
+# Hyperd Configuration
 
 ## Configuration file
 
-The configuration file of Hyper is located under `/etc/hyper/config`. The file is in INI format：
+The configuration file of Hyper is located under `/etc/hyper/config` by default. The file is in INI format：
 
-    Host   = tcp://localhost:1246
-    Kernel = /var/lib/hyper/kernerl
-    Initrd = /var/lib/hyper/hyper-initrd.img
-    Bridge = hyper0
-    BridgeIP = 192.168.123.1/24
+```
+# Root directory for hyperd
+# Root=/var/lib/hyper/
 
-#### Parameters
+# Specify the hypervisor: libvirt, qemu, qemu-kvm, kvm, xen, vbox (for linux)
+#                         vbox (for mac).
+# "kvm"  is equivalent to "qemu-kvm" which uses qemu with kvm acceleration.
+# "qemu" is equivalent to "qemu-kvm" when the system enables kvm, otherwise
+#        the hypervisor is "qemu-tcg" (qemu without kvm acceleration).
+# When Hypervisor is not set, the hyperd will try to probe "qemu-kvm" or "xen"
+# as the containers' hypervisor according to the host, if the host doesn't
+# support any hardware-assisted technology, it will use "qemu-tcg".
+#
+# Hypervisor=qemu
 
-- `Host`: bind hyperd's socket to the IP and Port, by default hyperd listens on `unix:///var/run/hyper.sock`
-- `Kernel`: the path of the HyperKernel, by default `/var/lib/hyper/kernel`
-- `Initrd`: the path of the initrd file, by default `/var/lib/hyper/hyper-initrd.img`
-- `Bridge`: bridge name, default `hyper0`
-- `BridgeIP`:  IP range of the bridge, default `192.168.123.0/24`
+# Boot kernel
+Kernel=/var/lib/hyper/kernel
 
-## CLI usage
+# Boot initrd
+Initrd=/var/lib/hyper/hyper-initrd.img
+
+# Storage driver for hyperd, valid value includes devicemapper, overlay, and aufs
+# StorageDriver=overlay
+
+# Bridge device for hyperd, default is hyper0
+# Bridge=
+
+# Bridge ip address for the bridge device
+# BridgeIP=
+
+# If the host IP is provided, a TCP port will be listened for, same as the '--host' option
+# Host=
+
+# This is only useful for hypernetes, to disable the iptables setup by hyperd
+# DisableIptables=false
+
+# Enable vsock support. This only works with libvirt/qemu hypervisor and template disabled
+# EnableVsock=false
+
+# VmFactoryPolicy defines the policies to create factories
+# VmFactoryPolicy = [FactoryConfig,]*FactoryConfig
+# FactoryConfig   = {["cache":NUMBER,]["template":(true|false),]"cpu":NUMBER,"memory":NUMBER}
+# Examples:
+# VmFactoryPolicy={"cache":10, "cpu":1, "memory":128}
+# VmFactoryPolicy={"cpu":3, "memory":1024}
+# VmFactoryPolicy={"template":true, "cpu":1, "memory":128}
+# VmFactoryPolicy={"cache":1, "template":true, "cpu":1, "memory":128}
+# VmFactoryPolicy={"cache":10, "template":true, "cpu":1, "memory":128},{"template":true, "cpu":3, "memory":1024}
+# It is recommended to specify the "cache" when VmFactoryPolicy is set,
+# otherwise it is a less efficient factory
+VmFactoryPolicy=
+
+[Log]
+# PodLogPrefix=/var/run/hyper/Pods
+# PodIdInPath=true
+```
+
+## Hyperd command line
 
 	Usage:
 	  ./hyperd [OPTIONS]
