@@ -13,7 +13,7 @@ Clone hyper in GoPath
 And make sure you have `go` (>= 1.5, 1.7 or later is recommended) and `autotools`, develop files of
 `libdevmapper`, `libsqlite3`, `libvirt-devel` then
 
-    > cd hyper
+    > cd hyperd
     > ./autogen.sh
     > ./configure
     > make
