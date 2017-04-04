@@ -7,7 +7,7 @@ Clone hyper in GoPath
     > cd ${GOPATH}/src
     > mkdir -p github.com/hyperhq
     > cd github.com/hyperhq
-    > git clone https://github.com/hyperhq/hyperd.git hyper
+    > git clone https://github.com/hyperhq/hyperd.git hyperd
     > git clone https://github.com/hyperhq/runv.git runv
 
 And make sure you have `go` (>= 1.5, 1.7 or later is recommended) and `autotools`, develop files of
