@@ -13,6 +13,6 @@
 - Fedora ( > 23 )
 - Debian ( > 7.0 )
 
-The pre-build packages for these distros could be Download from [download.hypercontainer.io][download.hypercontainer.io]
+Download the pre-built packages from [download.hypercontainer.io][download.hypercontainer.io]
 
 [download.hypercontainer.io]:http://download.hypercontainer.io/
