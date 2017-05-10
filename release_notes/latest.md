@@ -1,13 +1,12 @@
 # Version 0.8.1 (2017-05-10)
 
-This is a bug fix release includes:
+Bug fix:
 
-- Enable the vsock support, which works as the communication channel between host and guest.
-- Fixes for Kubernetes CRI compatibility.
-- Fixes on container IO streams.
-- Other general bug fixes.
+- Enable vSock, a communication channel between host and guest.
+- Kubernetes CRI compatibility issues.
+- Container IO stream issues.
 
-The detail of the issues addressed in 0.8.1 could be [found here][milestone-0.8.1]
+The detail of the issues addressed in 0.8.1 could be found [here][milestone-0.8.1]
 
 # Version 0.8 (2017-03-20)
 
