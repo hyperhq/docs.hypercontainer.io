@@ -5,6 +5,7 @@ Bug fix:
 - Enable vSock, a communication channel between host and guest.
 - Kubernetes CRI compatibility issues.
 - Container IO stream issues.
+- Fixed the Xen build.
 
 The detail of the issues addressed in 0.8.1 could be found [here][milestone-0.8.1]
 
