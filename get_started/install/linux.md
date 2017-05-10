@@ -10,39 +10,9 @@
 
 - Ubuntu ( > 14.04 )
 - CentOS/RHEL 7.x
-- Fedora ( > 20 )
+- Fedora ( > 23 )
 - Debian ( > 7.0 )
 
-### RPMs for CentOS/RHEL7
+Download the pre-built packages from [download.hypercontainer.io][download.hypercontainer.io]
 
-x86_64 binary packages:
-
-> - [hyper-container-0.8.0-1.el7.centos.x86_64.rpm](https://hypercontainer-install.s3.amazonaws.com/hyper-container-0.8.0-1.el7.centos.x86_64.rpm)
-> -  [hyperstart-0.8.0-1.el7.centos.x86_64.rpm](https://hypercontainer-install.s3.amazonaws.com/hyperstart-0.8.0-1.el7.centos.x86_64.rpm)
-> - [qemu-hyper-2.4.1-3.el7.centos.x86_64.rpm](https://hypercontainer-install.s3.amazonaws.com/qemu-hyper-2.4.1-3.el7.centos.x86_64.rpm)
-
-and SRPMS:
-
-> - [hyper-container-0.8.0-1.el7.centos.src.rpm](https://hypercontainer-install.s3.amazonaws.com/hyper-container-0.8.0-1.el7.centos.src.rpm)
-> - [hyperstart-0.8.0-1.el7.centos.src.rpm](https://hypercontainer-install.s3.amazonaws.com/hyperstart-0.8.0-1.el7.centos.src.rpm)
-
-## RPMs for Fedora 23+
-
-x86_64 binary packages:
-
-> - [hyper-container-0.8.0-1.fc25.x86_64.rpm](https://hypercontainer-install.s3.amazonaws.com/hyper-container-0.8.0-1.fc25.x86_64.rpm)
-> - [hyperstart-0.8.0-1.fc25.x86_64.rpm](https://hypercontainer-install.s3.amazonaws.com/hyperstart-0.8.0-1.fc25.x86_64.rpm)
-
-and SRPMS:
-
-> - [hyper-container-0.8.0-1.fc25.src.rpm](https://hypercontainer-install.s3.amazonaws.com/hyper-container-0.8.0-1.fc25.src.rpm)
-> - [hyperstart-0.8.0-1.fc25.src.rpm](https://hypercontainer-install.s3.amazonaws.com/hyperstart-0.8.0-1.fc25.src.rpm)
-
-> *Note*: The qemu shipped in Fedora could work well with Hyper, we did not package qemu for Fedora.
-
-## Deb packages for Ubuntu
-
-Binary packages for `amd64`:
-
-> - [hypercontainer_0.8.0-1_amd64.deb](https://hypercontainer-install.s3.amazonaws.com/hypercontainer_0.8.0-1_amd64.deb)
-> - [hyperstart_0.8.0-1_amd64.deb](https://hypercontainer-install.s3.amazonaws.com/hyperstart_0.8.0-1_amd64.deb)
+[download.hypercontainer.io]:http://download.hypercontainer.io/
