@@ -1,3 +1,5 @@
+# Install with Binary Packages
+
 ## Requirements
 
 - Hypervisor: at least one of
@@ -9,7 +11,7 @@
 [the current version](../../release_notes/latest.md) supports the following Linux distros:
 
 - Ubuntu ( > 14.04 )
-- CentOS/RHEL 7.x
+- CentOS/RHEL ( 7.x )
 - Fedora ( > 23 )
 - Debian ( > 7.0 )
 
