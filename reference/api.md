@@ -100,6 +100,37 @@ Send kill signal to containers of a Pod
 
 `POST /pod/kill?podName=pod-xxxxxxxxxx&container=xxxxxxx&signal=9`
 
+##### List Port Mapping Rules
+
+`GET /pod/{pod_id}/portmappings`
+
+Get a list of current port mappings of a pod.
+
+##### Modify Port Mapping Rules
+
+`PUT /pod/{pod_id}/portmappings/{action}`
+
+Update port mapping rules
+
+- `action` could be `add` or `delete`
+
+The request body is an json **array** of `PortMapping`:
+
+```
+{
+	"containerPort": "80",
+	"hostPort": "3000",
+	"protocol": "udp"
+}
+```
+
+Where
+
+- `containerPort` and `hostPort` could be a single port or a range, such as "8000-8080"; and if the `containerPort` is a range, the `hostPort` should be a range in same size;
+- `protocol` could be `tcp` or `udp`.
+
+The request body should be an array even if there is only one rule to be added/deleted.
+
 #### 2.2 Container
 ##### Create container
 `POST /container/create`

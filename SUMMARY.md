@@ -28,6 +28,7 @@
        * [rm](reference/rm.md)
        * [info](reference/info.md)
        * [list](reference/list.md)
+       * [ports](reference/ports.md)
        * [pull](reference/pull.md)
        * [images](reference/images.md)
        * [rmi](reference/rmi.md)
