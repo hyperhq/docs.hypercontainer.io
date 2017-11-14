@@ -11,7 +11,7 @@
 
 - `workdir`: the directory running the container command
 
-- `ports`: the exposed ports of the container
+- *[Deprecated]* `ports`: the exposed ports of the container, the ports now is move to the Pod level
     - `containerPort`: the listening port inside container
     - `hostPort`: the port exposed in host machine
     - `protocol`: `tcp` (default) or `udp`
@@ -61,10 +61,6 @@ example:
     	        "uri": "https://s3.amazonaws/bucket/file.conf",
     	        "content": ""
     	    }
-        }],
-        "ports":[{
-            "containerPort": 80,
-            "hostPort": 8000,
         }],
         "tty": true
     }]

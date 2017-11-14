@@ -8,8 +8,7 @@ The configuration file of Hyper is located under `/etc/hyper/config` by default.
 # Root directory for hyperd
 # Root=/var/lib/hyper/
 
-# Specify the hypervisor: libvirt, qemu, qemu-kvm, kvm, xen, vbox (for linux)
-#                         vbox (for mac).
+# Specify the hypervisor: libvirt, qemu, qemu-kvm, kvm, xen, xenpv, kvmtool
 # "kvm"  is equivalent to "qemu-kvm" which uses qemu with kvm acceleration.
 # "qemu" is equivalent to "qemu-kvm" when the system enables kvm, otherwise
 #        the hypervisor is "qemu-tcg" (qemu without kvm acceleration).
@@ -25,7 +24,7 @@ Kernel=/var/lib/hyper/kernel
 # Boot initrd
 Initrd=/var/lib/hyper/hyper-initrd.img
 
-# Storage driver for hyperd, valid value includes devicemapper, overlay, and aufs
+# Storage driver for hyperd, valid value includes devicemapper, overlay, rawblock, and aufs
 # StorageDriver=overlay
 
 # Bridge device for hyperd, default is hyper0
